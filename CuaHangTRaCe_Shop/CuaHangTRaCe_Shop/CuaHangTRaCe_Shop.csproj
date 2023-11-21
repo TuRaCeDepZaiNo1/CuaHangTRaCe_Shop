@@ -70,12 +70,6 @@
   <ItemGroup>
     <Compile Include="Controllers\ListTaiKhoan.cs" />
     <Compile Include="DataBase\TRaCe_Shop.cs" />
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\202311172001320_createDb.cs" />
     <Compile Include="Migrations\202311172001320_createDb.designer.cs">
       <DependentUpon>202311172001320_createDb.cs</DependentUpon>
