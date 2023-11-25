@@ -68,6 +68,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\ListPhanQuyen.cs" />
     <Compile Include="Controllers\ListTaiKhoan.cs" />
     <Compile Include="DataBase\TRaCe_Shop.cs" />
     <Compile Include="Form1.cs">
@@ -110,11 +111,11 @@
     <Compile Include="Models\ThuongHieu.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserControl1.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="Views\DangKi.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <Compile Include="Views\DangKi.Designer.cs">
+      <DependentUpon>DangKi.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\DangNhap.cs">
       <SubType>Form</SubType>
@@ -165,6 +166,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Views\DangKi.resx">
+      <DependentUpon>DangKi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -247,6 +251,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\phone1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\management.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\products.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bill %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bill %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\products1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\classification.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
