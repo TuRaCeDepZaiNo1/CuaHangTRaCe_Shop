@@ -19,6 +19,12 @@ namespace CuaHangTRaCe_Shop.Views
             InitializeComponent();
         }
 
+        public DangNhap(string User, string Password):this()
+        {
+            txtUser.Text = User;
+            txtPassWord.Text = Password;
+        }
+
         private void DangNhap_Load(object sender, EventArgs e)
         {
             using(var db = new TRaCe_Shop())
@@ -46,7 +52,9 @@ namespace CuaHangTRaCe_Shop.Views
 
         private void lblDangKy_Click(object sender, EventArgs e)
         {
-            
+            this.Hide();
+            DangKi dangKi = new DangKi();
+            dangKi.ShowDialog();
         }
 
         private void lblDangKy_MouseEnter(object sender, EventArgs e)
