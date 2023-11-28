@@ -20,6 +20,9 @@ namespace CuaHangTRaCe_Shop.Views
         string layHoTen = string.Empty;
         string layChucVu = string.Empty;
 
+        UserControlTrangChu user1 = new UserControlTrangChu();
+        
+
         public MainForm(string HoTen, string ChucVu) : this()
         {
             txtTenNguoiDung.Text = HoTen;
@@ -34,11 +37,17 @@ namespace CuaHangTRaCe_Shop.Views
             if(txtChucVu.Text == "Quản Lí")
             {
                 btnQuanLi.Visible = true;
+                btnQuanLiTaiKhoan.Visible = true;
             }
             else
             {
                 btnQuanLi.Visible = false;
+                btnQuanLiTaiKhoan.Visible  = false;
             }
+            pnlHienThiLuaChon.Controls.Add(user1);
+            user1.Visible = true;
+            
+            lblHienThi.Text = "Trang Chủ";
         }
 
         private void btnDangXuatThoat_Click(object sender, EventArgs e)
@@ -64,30 +73,36 @@ namespace CuaHangTRaCe_Shop.Views
             pnlLienHe.Visible = false;
             pnlQuanLi.Visible = false;
             lblHienThi.Text = "Danh Mục Sản Phẩm";
+
+
         }
 
         private void btnLaptop_Click(object sender, EventArgs e)
         {
             pnlDanhMucSanPham.Visible = false;
             lblHienThi.Text = "Danh Mục Sản Phẩm / Laptop";
+
         }
 
         private void btnPhuKien_Click(object sender, EventArgs e)
         {
             pnlDanhMucSanPham.Visible = false;
             lblHienThi.Text = "Danh Mục Sản Phẩm / Phụ Kiện";
+
         }
 
         private void btnRAM_Click(object sender, EventArgs e)
         {
             pnlDanhMucSanPham.Visible = false;
             lblHienThi.Text = "Danh Mục Sản Phẩm / Ram";
+
         }
 
         private void btnCPU_Click(object sender, EventArgs e)
         {
             pnlDanhMucSanPham.Visible = false;
             lblHienThi.Text = "Danh Mục Sản Phẩm / CPU";
+
         }
 
         private void btnLienHe_Click(object sender, EventArgs e)
@@ -110,6 +125,7 @@ namespace CuaHangTRaCe_Shop.Views
             pnlDanhMucSanPham.Visible = false;
             pnlLienHe.Visible = false;
             lblHienThi.Text = "Thương Hiệu";
+
         }
 
         private void btnGioHang_Click(object sender, EventArgs e)
@@ -117,6 +133,7 @@ namespace CuaHangTRaCe_Shop.Views
             pnlDanhMucSanPham.Visible = false;
             pnlLienHe.Visible = false;
             lblHienThi.Text = "Giỏ Hàng";
+
         }
 
         private void btnThanhToan_Click(object sender, EventArgs e)
@@ -124,6 +141,7 @@ namespace CuaHangTRaCe_Shop.Views
             pnlDanhMucSanPham.Visible = false;
             pnlLienHe.Visible = false;
             lblHienThi.Text = "Thanh Toán";
+
         }
 
         private void btnQuanLiTaiKhoan_Click(object sender, EventArgs e)
@@ -131,18 +149,21 @@ namespace CuaHangTRaCe_Shop.Views
             pnlDanhMucSanPham.Visible = false;
             pnlLienHe.Visible = false;
             lblHienThi.Text = "Quản Lí Tài Khoản";
+
         }
 
         private void btnMesseger_Click(object sender, EventArgs e)
         {
             pnlLienHe.Visible = false;
             lblHienThi.Text = "Liên Hệ / Messager";
+
         }
 
         private void btnTongDai_Click(object sender, EventArgs e)
         {
             pnlLienHe.Visible = false;
             lblHienThi.Text = "Liên Hệ / Tổng Đài";
+
         }
 
         private void btnQuanLi_Click(object sender, EventArgs e)
@@ -157,24 +178,29 @@ namespace CuaHangTRaCe_Shop.Views
         {
             pnlQuanLi.Visible = false;
             lblHienThi.Text = "Quản Lí / Thương Hiệu";
+
         }
 
         private void btnQLDonBan_Click(object sender, EventArgs e)
         {
             pnlQuanLi.Visible = false;
             lblHienThi.Text = "Quản Lí / Đơn Bán";
+
         }
 
         private void btnQLDonNhap_Click(object sender, EventArgs e)
         {
             pnlQuanLi.Visible = false;
             lblHienThi.Text = "Quản Lí / Đơn Nhập";
+
         }
 
         private void btnQLSanPham_Click(object sender, EventArgs e)
         {
             pnlQuanLi.Visible = false;
             lblHienThi.Text = "Quản Lí / Sản Phẩm";
+
         }
+
     }
 }
