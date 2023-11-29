@@ -23,8 +23,8 @@ namespace CuaHangTRaCe_Shop.Views
         string layHoTen = string.Empty;
         string layChucVu = string.Empty;
 
-        UserControlTrangChu user1 = new UserControlTrangChu();
-        UserControlDanhSachThuongHieu user = new UserControlDanhSachThuongHieu();
+        UserControlTrangChu usertrangchu = new UserControlTrangChu();
+        UserControlDanhSachThuongHieu userthuonghieu = new UserControlDanhSachThuongHieu();
         
         
 
@@ -49,10 +49,10 @@ namespace CuaHangTRaCe_Shop.Views
                 btnQuanLi.Visible = false;
                 btnQuanLiTaiKhoan.Visible  = false;
             }
-            pnlHienThiLuaChon.Controls.Add(user1);
-            user1.Visible = true;
-            pnlHienThiLuaChon.Controls.Add(user);
-            user.Visible = false;
+            pnlHienThiLuaChon.Controls.Add(usertrangchu);
+            usertrangchu.Visible = true;
+            pnlHienThiLuaChon.Controls.Add(userthuonghieu);
+            userthuonghieu.Visible = false;
             lblHienThi.Text = "Trang Chủ";
         }
 
@@ -124,6 +124,8 @@ namespace CuaHangTRaCe_Shop.Views
             pnlDanhMucSanPham.Visible = false;
             pnlLienHe.Visible = false;
             lblHienThi.Text = "Trang Chủ";
+            usertrangchu.Visible = true;
+            userthuonghieu.Visible = false;
         }
 
         private void btnThuongHieu_Click(object sender, EventArgs e)
@@ -131,10 +133,10 @@ namespace CuaHangTRaCe_Shop.Views
             pnlDanhMucSanPham.Visible = false;
             pnlLienHe.Visible = false;
             lblHienThi.Text = "Thương Hiệu";
-            user1.Visible = false;
+            userthuonghieu.Visible = false;
             
-            user.Visible = true;
-            user1.Visible = false;
+            userthuonghieu.Visible = true;
+            usertrangchu.Visible = false;
         }
 
         private void btnGioHang_Click(object sender, EventArgs e)
@@ -220,9 +222,8 @@ namespace CuaHangTRaCe_Shop.Views
                     var search = db.ThuongHieus.Where(p => p.TenThuongHieu == txtSearch.Text).FirstOrDefault();
                     if(search != null)
                     {
-                        user.fillTimKiem(search.TenThuongHieu);
-                    }
-                    
+                        userthuonghieu.fillTimKiem(search.TenThuongHieu);
+                    }   
                 }
             }
             
@@ -250,6 +251,18 @@ namespace CuaHangTRaCe_Shop.Views
                 // Xử lý lỗi nếu có
                 Console.WriteLine("Lỗi chuyển đổi hình ảnh: " + ex.Message);
                 return null;
+            }
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            if(txtSearch.Text == "")
+            {
+                if(lblHienThi.Text == "Thương Hiệu")
+                {
+                    userthuonghieu.fillAll();
+                }
+                
             }
         }
     }

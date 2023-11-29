@@ -45,6 +45,19 @@ namespace CuaHangTRaCe_Shop.Views
             }
         } 
 
+        public void fillAll()
+        {
+            using (var db = new TRaCe_Shop())
+            {
+                flpDanhSachThuongHieu.Controls.Clear();
+                foreach (var item in db.ThuongHieus)
+                {
+                    UserControlThuongHieu user = new UserControlThuongHieu(ConvertBinaryDataToImage(item.HinhAnh), item.TenThuongHieu);
+                    flpDanhSachThuongHieu.Controls.Add(user);
+                }
+            }
+        }
+
         public Image ConvertBinaryDataToImage(byte[] binaryData)
         {
             try
