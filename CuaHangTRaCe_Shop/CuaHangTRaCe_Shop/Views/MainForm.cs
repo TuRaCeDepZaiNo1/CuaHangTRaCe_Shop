@@ -25,6 +25,7 @@ namespace CuaHangTRaCe_Shop.Views
 
         UserControlTrangChu usertrangchu = new UserControlTrangChu();
         UserControlDanhSachThuongHieu userthuonghieu = new UserControlDanhSachThuongHieu();
+        UserControLaptop userlaptop = new UserControLaptop();
         
         
 
@@ -53,6 +54,8 @@ namespace CuaHangTRaCe_Shop.Views
             usertrangchu.Visible = true;
             pnlHienThiLuaChon.Controls.Add(userthuonghieu);
             userthuonghieu.Visible = false;
+            pnlHienThiLuaChon.Controls.Add(userlaptop);
+            userlaptop.Visible = false;
             lblHienThi.Text = "Trang Chủ";
         }
 
@@ -89,7 +92,9 @@ namespace CuaHangTRaCe_Shop.Views
             pnlDanhMucSanPham.Visible = false;
             lblHienThi.Text = "Danh Mục Sản Phẩm / Laptop";
             txtSearch.Text = string.Empty;
-
+            userlaptop.Visible = true;
+            usertrangchu.Visible = false;
+            userthuonghieu.Visible = false;
         }
 
         private void btnPhuKien_Click(object sender, EventArgs e)
