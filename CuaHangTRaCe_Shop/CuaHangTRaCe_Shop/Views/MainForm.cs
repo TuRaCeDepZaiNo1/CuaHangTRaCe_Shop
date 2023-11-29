@@ -79,6 +79,7 @@ namespace CuaHangTRaCe_Shop.Views
             pnlLienHe.Visible = false;
             pnlQuanLi.Visible = false;
             lblHienThi.Text = "Danh Mục Sản Phẩm";
+            txtSearch.Text = string.Empty;
 
 
         }
@@ -87,6 +88,7 @@ namespace CuaHangTRaCe_Shop.Views
         {
             pnlDanhMucSanPham.Visible = false;
             lblHienThi.Text = "Danh Mục Sản Phẩm / Laptop";
+            txtSearch.Text = string.Empty;
 
         }
 
@@ -94,6 +96,7 @@ namespace CuaHangTRaCe_Shop.Views
         {
             pnlDanhMucSanPham.Visible = false;
             lblHienThi.Text = "Danh Mục Sản Phẩm / Phụ Kiện";
+            txtSearch.Text = string.Empty;
 
         }
 
@@ -101,6 +104,7 @@ namespace CuaHangTRaCe_Shop.Views
         {
             pnlDanhMucSanPham.Visible = false;
             lblHienThi.Text = "Danh Mục Sản Phẩm / Ram";
+            txtSearch.Text = string.Empty;
 
         }
 
@@ -108,6 +112,7 @@ namespace CuaHangTRaCe_Shop.Views
         {
             pnlDanhMucSanPham.Visible = false;
             lblHienThi.Text = "Danh Mục Sản Phẩm / CPU";
+            txtSearch.Text = string.Empty;
 
         }
 
@@ -117,6 +122,7 @@ namespace CuaHangTRaCe_Shop.Views
             pnlDanhMucSanPham.Visible = false;
             pnlQuanLi.Visible = false;
             lblHienThi.Text = "Liên Hệ";
+            txtSearch.Text = string.Empty;
         }
 
         private void btnTrangChu_Click(object sender, EventArgs e)
@@ -126,6 +132,7 @@ namespace CuaHangTRaCe_Shop.Views
             lblHienThi.Text = "Trang Chủ";
             usertrangchu.Visible = true;
             userthuonghieu.Visible = false;
+            txtSearch.Text = string.Empty;
         }
 
         private void btnThuongHieu_Click(object sender, EventArgs e)
@@ -133,10 +140,10 @@ namespace CuaHangTRaCe_Shop.Views
             pnlDanhMucSanPham.Visible = false;
             pnlLienHe.Visible = false;
             lblHienThi.Text = "Thương Hiệu";
-            userthuonghieu.Visible = false;
-            
+            userthuonghieu.fillAll();
             userthuonghieu.Visible = true;
             usertrangchu.Visible = false;
+            txtSearch.Text = string.Empty;
         }
 
         private void btnGioHang_Click(object sender, EventArgs e)
@@ -144,6 +151,7 @@ namespace CuaHangTRaCe_Shop.Views
             pnlDanhMucSanPham.Visible = false;
             pnlLienHe.Visible = false;
             lblHienThi.Text = "Giỏ Hàng";
+            txtSearch.Text = string.Empty;
 
         }
 
@@ -152,6 +160,7 @@ namespace CuaHangTRaCe_Shop.Views
             pnlDanhMucSanPham.Visible = false;
             pnlLienHe.Visible = false;
             lblHienThi.Text = "Thanh Toán";
+            txtSearch.Text = string.Empty;
 
         }
 
@@ -160,6 +169,7 @@ namespace CuaHangTRaCe_Shop.Views
             pnlDanhMucSanPham.Visible = false;
             pnlLienHe.Visible = false;
             lblHienThi.Text = "Quản Lí Tài Khoản";
+            txtSearch.Text = string.Empty;
 
         }
 
@@ -167,6 +177,7 @@ namespace CuaHangTRaCe_Shop.Views
         {
             pnlLienHe.Visible = false;
             lblHienThi.Text = "Liên Hệ / Messager";
+            txtSearch.Text = string.Empty;
 
         }
 
@@ -174,6 +185,7 @@ namespace CuaHangTRaCe_Shop.Views
         {
             pnlLienHe.Visible = false;
             lblHienThi.Text = "Liên Hệ / Tổng Đài";
+            txtSearch.Text = string.Empty;
 
         }
 
@@ -183,12 +195,14 @@ namespace CuaHangTRaCe_Shop.Views
             pnlLienHe.Visible = false;
             pnlDanhMucSanPham.Visible = false;
             lblHienThi.Text = "Quản Lí";
+            txtSearch.Text = string.Empty;
         }
 
         private void btnQLThuongHieu_Click(object sender, EventArgs e)
         {
             pnlQuanLi.Visible = false;
             lblHienThi.Text = "Quản Lí / Thương Hiệu";
+            txtSearch.Text = string.Empty;
 
         }
 
@@ -196,6 +210,7 @@ namespace CuaHangTRaCe_Shop.Views
         {
             pnlQuanLi.Visible = false;
             lblHienThi.Text = "Quản Lí / Đơn Bán";
+            txtSearch.Text = string.Empty;
 
         }
 
@@ -203,6 +218,7 @@ namespace CuaHangTRaCe_Shop.Views
         {
             pnlQuanLi.Visible = false;
             lblHienThi.Text = "Quản Lí / Đơn Nhập";
+            txtSearch.Text = string.Empty;
 
         }
 
@@ -210,6 +226,7 @@ namespace CuaHangTRaCe_Shop.Views
         {
             pnlQuanLi.Visible = false;
             lblHienThi.Text = "Quản Lí / Sản Phẩm";
+            txtSearch.Text = string.Empty;
 
         }
 
