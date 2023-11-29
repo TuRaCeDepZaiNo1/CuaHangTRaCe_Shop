@@ -1,8 +1,11 @@
-﻿using System;
+﻿using CuaHangTRaCe_Shop.DataBase;
+using Microsoft.VisualBasic.ApplicationServices;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,6 +24,8 @@ namespace CuaHangTRaCe_Shop.Views
         string layChucVu = string.Empty;
 
         UserControlTrangChu user1 = new UserControlTrangChu();
+        UserControlDanhSachThuongHieu user = new UserControlDanhSachThuongHieu();
+        
         
 
         public MainForm(string HoTen, string ChucVu) : this()
@@ -46,7 +51,8 @@ namespace CuaHangTRaCe_Shop.Views
             }
             pnlHienThiLuaChon.Controls.Add(user1);
             user1.Visible = true;
-            
+            pnlHienThiLuaChon.Controls.Add(user);
+            user.Visible = false;
             lblHienThi.Text = "Trang Chủ";
         }
 
@@ -125,7 +131,10 @@ namespace CuaHangTRaCe_Shop.Views
             pnlDanhMucSanPham.Visible = false;
             pnlLienHe.Visible = false;
             lblHienThi.Text = "Thương Hiệu";
-
+            user1.Visible = false;
+            
+            user.Visible = true;
+            user1.Visible = false;
         }
 
         private void btnGioHang_Click(object sender, EventArgs e)
@@ -202,5 +211,46 @@ namespace CuaHangTRaCe_Shop.Views
 
         }
 
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            using(var db = new TRaCe_Shop())
+            {
+                if (lblHienThi.Text == "Thương Hiệu")
+                {
+                    var search = db.ThuongHieus.Where(p => p.TenThuongHieu == txtSearch.Text).FirstOrDefault();
+                    if(search != null)
+                    {
+                        user.fillTimKiem(search.TenThuongHieu);
+                    }
+                    
+                }
+            }
+            
+        }
+
+        public Image ConvertBinaryDataToImage(byte[] binaryData)
+        {
+            try
+            {
+                if (binaryData == null || binaryData.Length == 0)
+                {
+                    // Trả về null nếu dữ liệu là null hoặc rỗng
+                    return null;
+                }
+
+                using (MemoryStream memoryStream = new MemoryStream(binaryData))
+                {
+                    // Đọc dữ liệu từ MemoryStream và chuyển đổi thành đối tượng Image
+                    Image image = Image.FromStream(memoryStream);
+                    return image;
+                }
+            }
+            catch (Exception ex)
+            {
+                // Xử lý lỗi nếu có
+                Console.WriteLine("Lỗi chuyển đổi hình ảnh: " + ex.Message);
+                return null;
+            }
+        }
     }
 }

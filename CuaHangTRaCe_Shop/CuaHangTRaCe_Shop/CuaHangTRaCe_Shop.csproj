@@ -71,12 +71,6 @@
     <Compile Include="Controllers\ListPhanQuyen.cs" />
     <Compile Include="Controllers\ListTaiKhoan.cs" />
     <Compile Include="DataBase\TRaCe_Shop.cs" />
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\202311172001320_createDb.cs" />
     <Compile Include="Migrations\202311172001320_createDb.designer.cs">
       <DependentUpon>202311172001320_createDb.cs</DependentUpon>
@@ -111,6 +105,12 @@
     <Compile Include="Models\ThuongHieu.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThemThuongHieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemThuongHieu.Designer.cs">
+      <DependentUpon>ThemThuongHieu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\DangKi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +140,18 @@
     </Compile>
     <Compile Include="Views\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControlDanhSachThuongHieu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserControlDanhSachThuongHieu.Designer.cs">
+      <DependentUpon>UserControlDanhSachThuongHieu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControlThuongHieu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserControlThuongHieu.Designer.cs">
+      <DependentUpon>UserControlThuongHieu.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\UserControlTrangChu.cs">
       <SubType>UserControl</SubType>
@@ -172,6 +184,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ThemThuongHieu.resx">
+      <DependentUpon>ThemThuongHieu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\DangKi.resx">
       <DependentUpon>DangKi.cs</DependentUpon>
     </EmbeddedResource>
@@ -186,6 +201,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControlDanhSachThuongHieu.resx">
+      <DependentUpon>UserControlDanhSachThuongHieu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControlThuongHieu.resx">
+      <DependentUpon>UserControlThuongHieu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\UserControlTrangChu.resx">
       <DependentUpon>UserControlTrangChu.cs</DependentUpon>

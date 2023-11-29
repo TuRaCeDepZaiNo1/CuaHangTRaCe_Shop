@@ -48,6 +48,7 @@
             this.label1.Size = new System.Drawing.Size(121, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "ID Thương Hiệu";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -57,6 +58,7 @@
             this.label2.Size = new System.Drawing.Size(131, 20);
             this.label2.TabIndex = 0;
             this.label2.Text = "Tên Thương Hiệu";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -66,6 +68,7 @@
             this.label3.Size = new System.Drawing.Size(75, 20);
             this.label3.TabIndex = 0;
             this.label3.Text = "Hình Ảnh";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // ptbHinhAnh
             // 
@@ -75,6 +78,7 @@
             this.ptbHinhAnh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ptbHinhAnh.TabIndex = 1;
             this.ptbHinhAnh.TabStop = false;
+            this.ptbHinhAnh.Click += new System.EventHandler(this.ptbHinhAnh_Click);
             // 
             // txtID
             // 
@@ -82,6 +86,7 @@
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(212, 26);
             this.txtID.TabIndex = 2;
+            this.txtID.TextChanged += new System.EventHandler(this.txtID_TextChanged);
             // 
             // txtTen
             // 
@@ -89,6 +94,7 @@
             this.txtTen.Name = "txtTen";
             this.txtTen.Size = new System.Drawing.Size(212, 26);
             this.txtTen.TabIndex = 2;
+            this.txtTen.TextChanged += new System.EventHandler(this.txtTen_TextChanged);
             // 
             // btnThem
             // 

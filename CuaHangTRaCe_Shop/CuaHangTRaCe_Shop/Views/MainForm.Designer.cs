@@ -184,6 +184,7 @@
             this.btnTimKiem.Size = new System.Drawing.Size(69, 65);
             this.btnTimKiem.TabIndex = 0;
             this.btnTimKiem.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // panel5
             // 

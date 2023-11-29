@@ -31,6 +31,7 @@ namespace CuaHangTRaCe_Shop.Views
                 thuongHieu.HinhAnh = ConvertImageToByteArray(ptbHinhAnh.Image);
                 db.ThuongHieus.Add(thuongHieu);
                 db.SaveChanges();
+                MessageBox.Show("Thêm thương hiệu thành công!", "Thông Báo", MessageBoxButtons.OK);
             }
         }
 
@@ -64,6 +65,36 @@ namespace CuaHangTRaCe_Shop.Views
             this.Hide();
             XemThuongHieu frm = new XemThuongHieu();
             frm.ShowDialog();
+        }
+
+        private void txtTen_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ptbHinhAnh_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
