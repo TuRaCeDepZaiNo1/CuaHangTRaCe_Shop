@@ -35,8 +35,13 @@
             this.pnlHienThi = new System.Windows.Forms.Panel();
             this.pnlHienThiLuaChon = new System.Windows.Forms.Panel();
             this.pnlDanhMuc = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblHienThi = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnTimKiem = new Guna.UI2.WinForms.Guna2CircleButton();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.btnDangXuatThoat = new System.Windows.Forms.Button();
             this.guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,27 +50,12 @@
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnlQuanLi = new System.Windows.Forms.Panel();
-            this.pnlLienHe = new System.Windows.Forms.Panel();
-            this.pnlDanhMucSanPham = new System.Windows.Forms.Panel();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
-            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.lblHienThi = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnTimKiem = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.btnDangXuatThoat = new System.Windows.Forms.Button();
             this.btnQLSanPham = new Guna.UI2.WinForms.Guna2Button();
             this.btnQLDonNhap = new Guna.UI2.WinForms.Guna2Button();
             this.btnQLDonBan = new Guna.UI2.WinForms.Guna2Button();
             this.btnQLThuongHieu = new Guna.UI2.WinForms.Guna2Button();
             this.btnQuanLi = new Guna.UI2.WinForms.Guna2Button();
+            this.pnlLienHe = new System.Windows.Forms.Panel();
             this.btnTongDai = new Guna.UI2.WinForms.Guna2Button();
             this.btnMesseger = new Guna.UI2.WinForms.Guna2Button();
             this.btnLienHe = new Guna.UI2.WinForms.Guna2Button();
@@ -73,19 +63,31 @@
             this.btnThanhToan = new Guna.UI2.WinForms.Guna2Button();
             this.btnGioHang = new Guna.UI2.WinForms.Guna2Button();
             this.btnThuongHieu = new Guna.UI2.WinForms.Guna2Button();
+            this.pnlDanhMucSanPham = new System.Windows.Forms.Panel();
             this.btnCPU = new Guna.UI2.WinForms.Guna2Button();
             this.btnRAM = new Guna.UI2.WinForms.Guna2Button();
             this.btnPhuKien = new Guna.UI2.WinForms.Guna2Button();
             this.btnLaptop = new Guna.UI2.WinForms.Guna2Button();
             this.btnDanhMucSanPham = new Guna.UI2.WinForms.Guna2Button();
             this.btnTrangChu = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.ptbTRaCe_Shop = new System.Windows.Forms.PictureBox();
+            this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.pnlHienThi.SuspendLayout();
             this.pnlDanhMuc.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.guna2ContextMenuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.pnlQuanLi.SuspendLayout();
@@ -93,8 +95,6 @@
             this.pnlDanhMucSanPham.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbTRaCe_Shop)).BeginInit();
             this.SuspendLayout();
             // 
@@ -150,6 +150,28 @@
             this.pnlDanhMuc.Size = new System.Drawing.Size(1625, 50);
             this.pnlDanhMuc.TabIndex = 1;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = global::CuaHangTRaCe_Shop.Properties.Resources.menu_bar;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // lblHienThi
+            // 
+            this.lblHienThi.AutoSize = true;
+            this.lblHienThi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblHienThi.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblHienThi.Location = new System.Drawing.Point(65, 10);
+            this.lblHienThi.Name = "lblHienThi";
+            this.lblHienThi.Size = new System.Drawing.Size(112, 29);
+            this.lblHienThi.TabIndex = 0;
+            this.lblHienThi.Text = "Hiển Thị";
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -161,6 +183,25 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1625, 74);
             this.panel3.TabIndex = 1;
+            // 
+            // btnTimKiem
+            // 
+            this.btnTimKiem.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnTimKiem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnTimKiem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnTimKiem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnTimKiem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnTimKiem.FillColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnTimKiem.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnTimKiem.ForeColor = System.Drawing.Color.White;
+            this.btnTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btnTimKiem.Image")));
+            this.btnTimKiem.Location = new System.Drawing.Point(514, 5);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnTimKiem.Size = new System.Drawing.Size(69, 65);
+            this.btnTimKiem.TabIndex = 0;
+            this.btnTimKiem.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // panel5
             // 
@@ -174,6 +215,34 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(399, 74);
             this.panel5.TabIndex = 1;
+            // 
+            // guna2CirclePictureBox1
+            // 
+            this.guna2CirclePictureBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.guna2CirclePictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.BackgroundImage")));
+            this.guna2CirclePictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
+            this.guna2CirclePictureBox1.ImageRotate = 0F;
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(18, 15);
+            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
+            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(51, 46);
+            this.guna2CirclePictureBox1.TabIndex = 0;
+            this.guna2CirclePictureBox1.TabStop = false;
+            // 
+            // btnDangXuatThoat
+            // 
+            this.btnDangXuatThoat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDangXuatThoat.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnDangXuatThoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnDangXuatThoat.ContextMenuStrip = this.guna2ContextMenuStrip1;
+            this.btnDangXuatThoat.Image = ((System.Drawing.Image)(resources.GetObject("btnDangXuatThoat.Image")));
+            this.btnDangXuatThoat.Location = new System.Drawing.Point(311, 7);
+            this.btnDangXuatThoat.Name = "btnDangXuatThoat";
+            this.btnDangXuatThoat.Size = new System.Drawing.Size(67, 61);
+            this.btnDangXuatThoat.TabIndex = 3;
+            this.btnDangXuatThoat.UseVisualStyleBackColor = false;
+            this.btnDangXuatThoat.Click += new System.EventHandler(this.btnDangXuatThoat_Click);
             // 
             // guna2ContextMenuStrip1
             // 
@@ -217,7 +286,7 @@
             // txtChucVu
             // 
             this.txtChucVu.AutoSize = true;
-            this.txtChucVu.Location = new System.Drawing.Point(81, 46);
+            this.txtChucVu.Location = new System.Drawing.Point(81, 39);
             this.txtChucVu.Name = "txtChucVu";
             this.txtChucVu.Size = new System.Drawing.Size(70, 20);
             this.txtChucVu.TabIndex = 2;
@@ -226,7 +295,7 @@
             // txtTenNguoiDung
             // 
             this.txtTenNguoiDung.AutoSize = true;
-            this.txtTenNguoiDung.Location = new System.Drawing.Point(81, 24);
+            this.txtTenNguoiDung.Location = new System.Drawing.Point(81, 17);
             this.txtTenNguoiDung.Name = "txtTenNguoiDung";
             this.txtTenNguoiDung.Size = new System.Drawing.Size(124, 20);
             this.txtTenNguoiDung.TabIndex = 2;
@@ -287,161 +356,6 @@
             this.pnlQuanLi.Name = "pnlQuanLi";
             this.pnlQuanLi.Size = new System.Drawing.Size(321, 220);
             this.pnlQuanLi.TabIndex = 12;
-            // 
-            // pnlLienHe
-            // 
-            this.pnlLienHe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(210)))), ((int)(((byte)(190)))));
-            this.pnlLienHe.Controls.Add(this.btnTongDai);
-            this.pnlLienHe.Controls.Add(this.btnMesseger);
-            this.pnlLienHe.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlLienHe.Location = new System.Drawing.Point(0, 729);
-            this.pnlLienHe.Name = "pnlLienHe";
-            this.pnlLienHe.Size = new System.Drawing.Size(321, 110);
-            this.pnlLienHe.TabIndex = 8;
-            // 
-            // pnlDanhMucSanPham
-            // 
-            this.pnlDanhMucSanPham.Controls.Add(this.btnCPU);
-            this.pnlDanhMucSanPham.Controls.Add(this.btnRAM);
-            this.pnlDanhMucSanPham.Controls.Add(this.btnPhuKien);
-            this.pnlDanhMucSanPham.Controls.Add(this.btnLaptop);
-            this.pnlDanhMucSanPham.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlDanhMucSanPham.Location = new System.Drawing.Point(0, 234);
-            this.pnlDanhMucSanPham.Name = "pnlDanhMucSanPham";
-            this.pnlDanhMucSanPham.Size = new System.Drawing.Size(321, 220);
-            this.pnlDanhMucSanPham.TabIndex = 5;
-            // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.BorderRadius = 40;
-            this.guna2Panel1.Controls.Add(this.label1);
-            this.guna2Panel1.Controls.Add(this.panel6);
-            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(321, 124);
-            this.guna2Panel1.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(120, 42);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(152, 32);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "TRaCe_Shop";
-            // 
-            // panel6
-            // 
-            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel6.Controls.Add(this.ptbTRaCe_Shop);
-            this.panel6.Location = new System.Drawing.Point(12, 7);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(101, 100);
-            this.panel6.TabIndex = 0;
-            // 
-            // guna2BorderlessForm1
-            // 
-            this.guna2BorderlessForm1.BorderRadius = 40;
-            this.guna2BorderlessForm1.ContainerControl = this;
-            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
-            this.guna2BorderlessForm1.TransparentWhileDrag = true;
-            // 
-            // guna2Elipse1
-            // 
-            this.guna2Elipse1.BorderRadius = 13;
-            this.guna2Elipse1.TargetControl = this.guna2ContextMenuStrip1;
-            // 
-            // guna2Elipse2
-            // 
-            this.guna2Elipse2.BorderRadius = 40;
-            this.guna2Elipse2.TargetControl = this.panel2;
-            // 
-            // guna2Elipse3
-            // 
-            this.guna2Elipse3.BorderRadius = 30;
-            this.guna2Elipse3.TargetControl = this.pnlDanhMucSanPham;
-            // 
-            // guna2Elipse4
-            // 
-            this.guna2Elipse4.BorderRadius = 30;
-            this.guna2Elipse4.TargetControl = this.pnlLienHe;
-            // 
-            // guna2Elipse5
-            // 
-            this.guna2Elipse5.BorderRadius = 15;
-            this.guna2Elipse5.TargetControl = this.pnlQuanLi;
-            // 
-            // lblHienThi
-            // 
-            this.lblHienThi.AutoSize = true;
-            this.lblHienThi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblHienThi.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblHienThi.Location = new System.Drawing.Point(65, 10);
-            this.lblHienThi.Name = "lblHienThi";
-            this.lblHienThi.Size = new System.Drawing.Size(85, 29);
-            this.lblHienThi.TabIndex = 0;
-            this.lblHienThi.Text = "label2";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = global::CuaHangTRaCe_Shop.Properties.Resources.menu_bar;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnTimKiem
-            // 
-            this.btnTimKiem.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnTimKiem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnTimKiem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnTimKiem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnTimKiem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnTimKiem.FillColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnTimKiem.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnTimKiem.ForeColor = System.Drawing.Color.White;
-            this.btnTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btnTimKiem.Image")));
-            this.btnTimKiem.Location = new System.Drawing.Point(514, 5);
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnTimKiem.Size = new System.Drawing.Size(69, 65);
-            this.btnTimKiem.TabIndex = 0;
-            this.btnTimKiem.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
-            // 
-            // guna2CirclePictureBox1
-            // 
-            this.guna2CirclePictureBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.guna2CirclePictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.BackgroundImage")));
-            this.guna2CirclePictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(18, 22);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(51, 46);
-            this.guna2CirclePictureBox1.TabIndex = 0;
-            this.guna2CirclePictureBox1.TabStop = false;
-            // 
-            // btnDangXuatThoat
-            // 
-            this.btnDangXuatThoat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDangXuatThoat.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnDangXuatThoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnDangXuatThoat.ContextMenuStrip = this.guna2ContextMenuStrip1;
-            this.btnDangXuatThoat.Image = ((System.Drawing.Image)(resources.GetObject("btnDangXuatThoat.Image")));
-            this.btnDangXuatThoat.Location = new System.Drawing.Point(311, 7);
-            this.btnDangXuatThoat.Name = "btnDangXuatThoat";
-            this.btnDangXuatThoat.Size = new System.Drawing.Size(67, 61);
-            this.btnDangXuatThoat.TabIndex = 3;
-            this.btnDangXuatThoat.UseVisualStyleBackColor = false;
-            this.btnDangXuatThoat.Click += new System.EventHandler(this.btnDangXuatThoat_Click);
             // 
             // btnQLSanPham
             // 
@@ -560,6 +474,17 @@
             this.btnQuanLi.Text = "Quản Lí";
             this.btnQuanLi.TextOffset = new System.Drawing.Point(20, 0);
             this.btnQuanLi.Click += new System.EventHandler(this.btnQuanLi_Click);
+            // 
+            // pnlLienHe
+            // 
+            this.pnlLienHe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(210)))), ((int)(((byte)(190)))));
+            this.pnlLienHe.Controls.Add(this.btnTongDai);
+            this.pnlLienHe.Controls.Add(this.btnMesseger);
+            this.pnlLienHe.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlLienHe.Location = new System.Drawing.Point(0, 729);
+            this.pnlLienHe.Name = "pnlLienHe";
+            this.pnlLienHe.Size = new System.Drawing.Size(321, 110);
+            this.pnlLienHe.TabIndex = 8;
             // 
             // btnTongDai
             // 
@@ -720,6 +645,18 @@
             this.btnThuongHieu.TextOffset = new System.Drawing.Point(20, 0);
             this.btnThuongHieu.Click += new System.EventHandler(this.btnThuongHieu_Click);
             // 
+            // pnlDanhMucSanPham
+            // 
+            this.pnlDanhMucSanPham.Controls.Add(this.btnCPU);
+            this.pnlDanhMucSanPham.Controls.Add(this.btnRAM);
+            this.pnlDanhMucSanPham.Controls.Add(this.btnPhuKien);
+            this.pnlDanhMucSanPham.Controls.Add(this.btnLaptop);
+            this.pnlDanhMucSanPham.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlDanhMucSanPham.Location = new System.Drawing.Point(0, 234);
+            this.pnlDanhMucSanPham.Name = "pnlDanhMucSanPham";
+            this.pnlDanhMucSanPham.Size = new System.Drawing.Size(321, 220);
+            this.pnlDanhMucSanPham.TabIndex = 5;
+            // 
             // btnCPU
             // 
             this.btnCPU.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(210)))), ((int)(((byte)(190)))));
@@ -861,6 +798,37 @@
             this.btnTrangChu.TextOffset = new System.Drawing.Point(20, 0);
             this.btnTrangChu.Click += new System.EventHandler(this.btnTrangChu_Click);
             // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.BorderRadius = 40;
+            this.guna2Panel1.Controls.Add(this.label1);
+            this.guna2Panel1.Controls.Add(this.panel6);
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(321, 124);
+            this.guna2Panel1.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(120, 42);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(152, 32);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "TRaCe_Shop";
+            // 
+            // panel6
+            // 
+            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel6.Controls.Add(this.ptbTRaCe_Shop);
+            this.panel6.Location = new System.Drawing.Point(12, 7);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(101, 100);
+            this.panel6.TabIndex = 0;
+            // 
             // ptbTRaCe_Shop
             // 
             this.ptbTRaCe_Shop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -872,6 +840,38 @@
             this.ptbTRaCe_Shop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbTRaCe_Shop.TabIndex = 0;
             this.ptbTRaCe_Shop.TabStop = false;
+            // 
+            // guna2BorderlessForm1
+            // 
+            this.guna2BorderlessForm1.BorderRadius = 40;
+            this.guna2BorderlessForm1.ContainerControl = this;
+            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2BorderlessForm1.TransparentWhileDrag = true;
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 13;
+            this.guna2Elipse1.TargetControl = this.guna2ContextMenuStrip1;
+            // 
+            // guna2Elipse2
+            // 
+            this.guna2Elipse2.BorderRadius = 40;
+            this.guna2Elipse2.TargetControl = this.panel2;
+            // 
+            // guna2Elipse3
+            // 
+            this.guna2Elipse3.BorderRadius = 30;
+            this.guna2Elipse3.TargetControl = this.pnlDanhMucSanPham;
+            // 
+            // guna2Elipse4
+            // 
+            this.guna2Elipse4.BorderRadius = 30;
+            this.guna2Elipse4.TargetControl = this.pnlLienHe;
+            // 
+            // guna2Elipse5
+            // 
+            this.guna2Elipse5.BorderRadius = 15;
+            this.guna2Elipse5.TargetControl = this.pnlQuanLi;
             // 
             // MainForm
             // 
@@ -890,9 +890,11 @@
             this.pnlHienThi.ResumeLayout(false);
             this.pnlDanhMuc.ResumeLayout(false);
             this.pnlDanhMuc.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.guna2ContextMenuStrip1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.pnlQuanLi.ResumeLayout(false);
@@ -901,8 +903,6 @@
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbTRaCe_Shop)).EndInit();
             this.ResumeLayout(false);
 

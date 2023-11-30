@@ -14,7 +14,7 @@ namespace CuaHangTRaCe_Shop.Models
         [Key]
         public int ID_BASE { get; set; }
         [Required]
-        public int TinhTrang {  get; set; }
+        public string TinhTrang {  get; set; }
         public virtual ICollection<LapTop> LapTops { get; set; }
         public virtual ICollection<PhuKien> PhuKien { get; set;}
     }

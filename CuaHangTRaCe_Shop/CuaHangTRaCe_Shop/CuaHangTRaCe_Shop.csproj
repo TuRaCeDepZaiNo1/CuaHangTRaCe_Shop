@@ -71,6 +71,12 @@
     <Compile Include="Controllers\ListPhanQuyen.cs" />
     <Compile Include="Controllers\ListTaiKhoan.cs" />
     <Compile Include="DataBase\TRaCe_Shop.cs" />
+    <Compile Include="FormThuThemLaptop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThuThemLaptop.Designer.cs">
+      <DependentUpon>FormThuThemLaptop.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\202311172001320_createDb.cs" />
     <Compile Include="Migrations\202311172001320_createDb.designer.cs">
       <DependentUpon>202311172001320_createDb.cs</DependentUpon>
@@ -82,6 +88,14 @@
     <Compile Include="Migrations\202311182144446_BoSung.cs" />
     <Compile Include="Migrations\202311182144446_BoSung.designer.cs">
       <DependentUpon>202311182144446_BoSung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202311300302435_updateDB.cs" />
+    <Compile Include="Migrations\202311300302435_updateDB.designer.cs">
+      <DependentUpon>202311300302435_updateDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202311300337232_updateDB1.cs" />
+    <Compile Include="Migrations\202311300337232_updateDB1.designer.cs">
+      <DependentUpon>202311300337232_updateDB1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BASE_ID.cs" />
@@ -171,6 +185,9 @@
     <Compile Include="XemThuongHieu.Designer.cs">
       <DependentUpon>XemThuongHieu.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FormThuThemLaptop.resx">
+      <DependentUpon>FormThuThemLaptop.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202311172001320_createDb.resx">
       <DependentUpon>202311172001320_createDb.cs</DependentUpon>
     </EmbeddedResource>
@@ -179,6 +196,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202311182144446_BoSung.resx">
       <DependentUpon>202311182144446_BoSung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202311300302435_updateDB.resx">
+      <DependentUpon>202311300302435_updateDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202311300337232_updateDB1.resx">
+      <DependentUpon>202311300337232_updateDB1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

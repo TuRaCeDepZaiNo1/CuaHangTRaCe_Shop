@@ -17,7 +17,6 @@ namespace CuaHangTRaCe_Shop.Models
         [Column(TypeName = "nvarchar")]
         public string TenCPU { get; set; }
         [Required]
-        public int SoLoi { get; set; }
         public virtual ICollection<LapTop> LapTop { get; set; }
     }
 }
