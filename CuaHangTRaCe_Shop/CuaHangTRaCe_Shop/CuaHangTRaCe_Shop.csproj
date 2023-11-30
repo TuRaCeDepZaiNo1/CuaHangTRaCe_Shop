@@ -167,6 +167,12 @@
     <Compile Include="Views\UserControlDanhSachThuongHieu.Designer.cs">
       <DependentUpon>UserControlDanhSachThuongHieu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\UserControlSanPhamLaptop.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserControlSanPhamLaptop.Designer.cs">
+      <DependentUpon>UserControlSanPhamLaptop.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\UserControlThuongHieu.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -236,6 +242,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\UserControlDanhSachThuongHieu.resx">
       <DependentUpon>UserControlDanhSachThuongHieu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserControlSanPhamLaptop.resx">
+      <DependentUpon>UserControlSanPhamLaptop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\UserControlThuongHieu.resx">
       <DependentUpon>UserControlThuongHieu.cs</DependentUpon>

@@ -31,11 +31,20 @@
             this.components = new System.ComponentModel.Container();
             this.tcLaptop = new System.Windows.Forms.TabControl();
             this.tbDanhSachLapTop = new System.Windows.Forms.TabPage();
-            this.tpThongTinChiTiet = new System.Windows.Forms.TabPage();
-            this.Panel = new System.Windows.Forms.Panel();
             this.pnlDanhMucLuaChon = new System.Windows.Forms.Panel();
+            this.cmbLoaiLaptop = new System.Windows.Forms.ComboBox();
+            this.cmbCpu = new System.Windows.Forms.ComboBox();
+            this.cmbRam = new System.Windows.Forms.ComboBox();
             this.cmbMucGia = new System.Windows.Forms.ComboBox();
             this.btnLoc = new Guna.UI2.WinForms.Guna2Button();
+            this.tpThongTinChiTiet = new System.Windows.Forms.TabPage();
+            this.Panel = new System.Windows.Forms.Panel();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.btnBoLoc = new Guna.UI2.WinForms.Guna2Button();
             this.btnMac = new Guna.UI2.WinForms.Guna2Button();
             this.btnMsi = new Guna.UI2.WinForms.Guna2Button();
             this.btnDell = new Guna.UI2.WinForms.Guna2Button();
@@ -44,18 +53,11 @@
             this.btnHP = new Guna.UI2.WinForms.Guna2Button();
             this.btnAcer = new Guna.UI2.WinForms.Guna2Button();
             this.btnAsus = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.cmbRam = new System.Windows.Forms.ComboBox();
-            this.cmbLoaiLaptop = new System.Windows.Forms.ComboBox();
-            this.cmbCpu = new System.Windows.Forms.ComboBox();
-            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.flpDanhMucLapTop = new System.Windows.Forms.FlowLayoutPanel();
             this.tcLaptop.SuspendLayout();
             this.tbDanhSachLapTop.SuspendLayout();
-            this.Panel.SuspendLayout();
             this.pnlDanhMucLuaChon.SuspendLayout();
+            this.Panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // tcLaptop
@@ -73,6 +75,7 @@
             // tbDanhSachLapTop
             // 
             this.tbDanhSachLapTop.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.tbDanhSachLapTop.Controls.Add(this.flpDanhMucLapTop);
             this.tbDanhSachLapTop.Controls.Add(this.pnlDanhMucLuaChon);
             this.tbDanhSachLapTop.Location = new System.Drawing.Point(4, 4);
             this.tbDanhSachLapTop.Name = "tbDanhSachLapTop";
@@ -80,6 +83,96 @@
             this.tbDanhSachLapTop.Size = new System.Drawing.Size(947, 677);
             this.tbDanhSachLapTop.TabIndex = 0;
             this.tbDanhSachLapTop.Text = "Danh sách Laptop";
+            // 
+            // pnlDanhMucLuaChon
+            // 
+            this.pnlDanhMucLuaChon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(160)))), ((int)(((byte)(150)))));
+            this.pnlDanhMucLuaChon.Controls.Add(this.cmbLoaiLaptop);
+            this.pnlDanhMucLuaChon.Controls.Add(this.cmbCpu);
+            this.pnlDanhMucLuaChon.Controls.Add(this.cmbRam);
+            this.pnlDanhMucLuaChon.Controls.Add(this.cmbMucGia);
+            this.pnlDanhMucLuaChon.Controls.Add(this.btnBoLoc);
+            this.pnlDanhMucLuaChon.Controls.Add(this.btnLoc);
+            this.pnlDanhMucLuaChon.Controls.Add(this.btnMac);
+            this.pnlDanhMucLuaChon.Controls.Add(this.btnMsi);
+            this.pnlDanhMucLuaChon.Controls.Add(this.btnDell);
+            this.pnlDanhMucLuaChon.Controls.Add(this.btnGigabyte);
+            this.pnlDanhMucLuaChon.Controls.Add(this.btnLenovo);
+            this.pnlDanhMucLuaChon.Controls.Add(this.btnHP);
+            this.pnlDanhMucLuaChon.Controls.Add(this.btnAcer);
+            this.pnlDanhMucLuaChon.Controls.Add(this.btnAsus);
+            this.pnlDanhMucLuaChon.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlDanhMucLuaChon.Location = new System.Drawing.Point(3, 3);
+            this.pnlDanhMucLuaChon.Name = "pnlDanhMucLuaChon";
+            this.pnlDanhMucLuaChon.Size = new System.Drawing.Size(941, 168);
+            this.pnlDanhMucLuaChon.TabIndex = 2;
+            // 
+            // cmbLoaiLaptop
+            // 
+            this.cmbLoaiLaptop.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmbLoaiLaptop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cmbLoaiLaptop.FormattingEnabled = true;
+            this.cmbLoaiLaptop.Location = new System.Drawing.Point(24, 116);
+            this.cmbLoaiLaptop.Name = "cmbLoaiLaptop";
+            this.cmbLoaiLaptop.Size = new System.Drawing.Size(176, 37);
+            this.cmbLoaiLaptop.TabIndex = 1;
+            this.cmbLoaiLaptop.Text = "Loại Laptop";
+            // 
+            // cmbCpu
+            // 
+            this.cmbCpu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmbCpu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cmbCpu.FormattingEnabled = true;
+            this.cmbCpu.Location = new System.Drawing.Point(634, 116);
+            this.cmbCpu.Name = "cmbCpu";
+            this.cmbCpu.Size = new System.Drawing.Size(176, 37);
+            this.cmbCpu.TabIndex = 1;
+            this.cmbCpu.Text = "CPU";
+            // 
+            // cmbRam
+            // 
+            this.cmbRam.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmbRam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cmbRam.FormattingEnabled = true;
+            this.cmbRam.Location = new System.Drawing.Point(429, 116);
+            this.cmbRam.Name = "cmbRam";
+            this.cmbRam.Size = new System.Drawing.Size(176, 37);
+            this.cmbRam.TabIndex = 1;
+            this.cmbRam.Text = "Ram";
+            // 
+            // cmbMucGia
+            // 
+            this.cmbMucGia.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmbMucGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cmbMucGia.FormattingEnabled = true;
+            this.cmbMucGia.Items.AddRange(new object[] {
+            "Dưới 10 triệu",
+            "10 - 15 triệu",
+            "15 - 20 triệu",
+            "20 - 25 triệu",
+            "25 - 30 triệu",
+            "Trên 30 triệu"});
+            this.cmbMucGia.Location = new System.Drawing.Point(225, 116);
+            this.cmbMucGia.Name = "cmbMucGia";
+            this.cmbMucGia.Size = new System.Drawing.Size(176, 37);
+            this.cmbMucGia.TabIndex = 1;
+            this.cmbMucGia.Text = "Mức giá";
+            // 
+            // btnLoc
+            // 
+            this.btnLoc.BorderRadius = 15;
+            this.btnLoc.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLoc.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLoc.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLoc.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLoc.FillColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnLoc.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnLoc.ForeColor = System.Drawing.Color.Black;
+            this.btnLoc.Location = new System.Drawing.Point(838, 116);
+            this.btnLoc.Name = "btnLoc";
+            this.btnLoc.Size = new System.Drawing.Size(78, 36);
+            this.btnLoc.TabIndex = 0;
+            this.btnLoc.Text = "Lọc";
             // 
             // tpThongTinChiTiet
             // 
@@ -100,54 +193,46 @@
             this.Panel.Size = new System.Drawing.Size(955, 710);
             this.Panel.TabIndex = 2;
             // 
-            // pnlDanhMucLuaChon
+            // guna2Elipse1
             // 
-            this.pnlDanhMucLuaChon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(160)))), ((int)(((byte)(150)))));
-            this.pnlDanhMucLuaChon.Controls.Add(this.cmbLoaiLaptop);
-            this.pnlDanhMucLuaChon.Controls.Add(this.cmbCpu);
-            this.pnlDanhMucLuaChon.Controls.Add(this.cmbRam);
-            this.pnlDanhMucLuaChon.Controls.Add(this.cmbMucGia);
-            this.pnlDanhMucLuaChon.Controls.Add(this.btnLoc);
-            this.pnlDanhMucLuaChon.Controls.Add(this.btnMac);
-            this.pnlDanhMucLuaChon.Controls.Add(this.btnMsi);
-            this.pnlDanhMucLuaChon.Controls.Add(this.btnDell);
-            this.pnlDanhMucLuaChon.Controls.Add(this.btnGigabyte);
-            this.pnlDanhMucLuaChon.Controls.Add(this.btnLenovo);
-            this.pnlDanhMucLuaChon.Controls.Add(this.btnHP);
-            this.pnlDanhMucLuaChon.Controls.Add(this.btnAcer);
-            this.pnlDanhMucLuaChon.Controls.Add(this.btnAsus);
-            this.pnlDanhMucLuaChon.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlDanhMucLuaChon.Location = new System.Drawing.Point(3, 3);
-            this.pnlDanhMucLuaChon.Name = "pnlDanhMucLuaChon";
-            this.pnlDanhMucLuaChon.Size = new System.Drawing.Size(941, 168);
-            this.pnlDanhMucLuaChon.TabIndex = 2;
+            this.guna2Elipse1.BorderRadius = 30;
+            this.guna2Elipse1.TargetControl = this.pnlDanhMucLuaChon;
             // 
-            // cmbMucGia
+            // guna2Elipse2
             // 
-            this.cmbMucGia.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cmbMucGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.cmbMucGia.FormattingEnabled = true;
-            this.cmbMucGia.Location = new System.Drawing.Point(225, 116);
-            this.cmbMucGia.Name = "cmbMucGia";
-            this.cmbMucGia.Size = new System.Drawing.Size(176, 37);
-            this.cmbMucGia.TabIndex = 1;
-            this.cmbMucGia.Text = "Mức giá";
+            this.guna2Elipse2.BorderRadius = 15;
+            this.guna2Elipse2.TargetControl = this.cmbLoaiLaptop;
             // 
-            // btnLoc
+            // guna2Elipse3
             // 
-            this.btnLoc.BorderRadius = 15;
-            this.btnLoc.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnLoc.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnLoc.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnLoc.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnLoc.FillColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnLoc.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnLoc.ForeColor = System.Drawing.Color.Black;
-            this.btnLoc.Location = new System.Drawing.Point(840, 114);
-            this.btnLoc.Name = "btnLoc";
-            this.btnLoc.Size = new System.Drawing.Size(78, 36);
-            this.btnLoc.TabIndex = 0;
-            this.btnLoc.Text = "Lọc";
+            this.guna2Elipse3.BorderRadius = 15;
+            this.guna2Elipse3.TargetControl = this.cmbMucGia;
+            // 
+            // guna2Elipse4
+            // 
+            this.guna2Elipse4.BorderRadius = 15;
+            this.guna2Elipse4.TargetControl = this.cmbRam;
+            // 
+            // guna2Elipse5
+            // 
+            this.guna2Elipse5.BorderRadius = 15;
+            this.guna2Elipse5.TargetControl = this.cmbCpu;
+            // 
+            // btnBoLoc
+            // 
+            this.btnBoLoc.BorderRadius = 15;
+            this.btnBoLoc.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBoLoc.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBoLoc.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBoLoc.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBoLoc.FillColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnBoLoc.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnBoLoc.ForeColor = System.Drawing.Color.Black;
+            this.btnBoLoc.Location = new System.Drawing.Point(827, 74);
+            this.btnBoLoc.Name = "btnBoLoc";
+            this.btnBoLoc.Size = new System.Drawing.Size(99, 36);
+            this.btnBoLoc.TabIndex = 0;
+            this.btnBoLoc.Text = "Bỏ lọc";
             // 
             // btnMac
             // 
@@ -297,63 +382,15 @@
             this.btnAsus.Size = new System.Drawing.Size(180, 45);
             this.btnAsus.TabIndex = 0;
             // 
-            // guna2Elipse1
+            // flpDanhMucLapTop
             // 
-            this.guna2Elipse1.BorderRadius = 30;
-            this.guna2Elipse1.TargetControl = this.pnlDanhMucLuaChon;
-            // 
-            // cmbRam
-            // 
-            this.cmbRam.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cmbRam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.cmbRam.FormattingEnabled = true;
-            this.cmbRam.Location = new System.Drawing.Point(429, 116);
-            this.cmbRam.Name = "cmbRam";
-            this.cmbRam.Size = new System.Drawing.Size(176, 37);
-            this.cmbRam.TabIndex = 1;
-            this.cmbRam.Text = "Ram";
-            // 
-            // cmbLoaiLaptop
-            // 
-            this.cmbLoaiLaptop.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cmbLoaiLaptop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.cmbLoaiLaptop.FormattingEnabled = true;
-            this.cmbLoaiLaptop.Location = new System.Drawing.Point(24, 116);
-            this.cmbLoaiLaptop.Name = "cmbLoaiLaptop";
-            this.cmbLoaiLaptop.Size = new System.Drawing.Size(176, 37);
-            this.cmbLoaiLaptop.TabIndex = 1;
-            this.cmbLoaiLaptop.Text = "Loại Laptop";
-            // 
-            // cmbCpu
-            // 
-            this.cmbCpu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cmbCpu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.cmbCpu.FormattingEnabled = true;
-            this.cmbCpu.Location = new System.Drawing.Point(634, 116);
-            this.cmbCpu.Name = "cmbCpu";
-            this.cmbCpu.Size = new System.Drawing.Size(176, 37);
-            this.cmbCpu.TabIndex = 1;
-            this.cmbCpu.Text = "CPU";
-            // 
-            // guna2Elipse2
-            // 
-            this.guna2Elipse2.BorderRadius = 15;
-            this.guna2Elipse2.TargetControl = this.cmbLoaiLaptop;
-            // 
-            // guna2Elipse3
-            // 
-            this.guna2Elipse3.BorderRadius = 15;
-            this.guna2Elipse3.TargetControl = this.cmbMucGia;
-            // 
-            // guna2Elipse4
-            // 
-            this.guna2Elipse4.BorderRadius = 15;
-            this.guna2Elipse4.TargetControl = this.cmbRam;
-            // 
-            // guna2Elipse5
-            // 
-            this.guna2Elipse5.BorderRadius = 15;
-            this.guna2Elipse5.TargetControl = this.cmbCpu;
+            this.flpDanhMucLapTop.AutoScroll = true;
+            this.flpDanhMucLapTop.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.flpDanhMucLapTop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flpDanhMucLapTop.Location = new System.Drawing.Point(3, 171);
+            this.flpDanhMucLapTop.Name = "flpDanhMucLapTop";
+            this.flpDanhMucLapTop.Size = new System.Drawing.Size(941, 503);
+            this.flpDanhMucLapTop.TabIndex = 3;
             // 
             // UserControLaptop
             // 
@@ -362,10 +399,11 @@
             this.Controls.Add(this.Panel);
             this.Name = "UserControLaptop";
             this.Size = new System.Drawing.Size(955, 710);
+            this.Load += new System.EventHandler(this.UserControLaptop_Load);
             this.tcLaptop.ResumeLayout(false);
             this.tbDanhSachLapTop.ResumeLayout(false);
-            this.Panel.ResumeLayout(false);
             this.pnlDanhMucLuaChon.ResumeLayout(false);
+            this.Panel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -395,5 +433,7 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse4;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse5;
+        private Guna.UI2.WinForms.Guna2Button btnBoLoc;
+        private System.Windows.Forms.FlowLayoutPanel flpDanhMucLapTop;
     }
 }

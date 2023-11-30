@@ -95,6 +95,7 @@ namespace CuaHangTRaCe_Shop.Views
             userlaptop.Visible = true;
             usertrangchu.Visible = false;
             userthuonghieu.Visible = false;
+            userlaptop.LoadForm();
         }
 
         private void btnPhuKien_Click(object sender, EventArgs e)
