@@ -31,20 +31,14 @@
             this.components = new System.ComponentModel.Container();
             this.tcLaptop = new System.Windows.Forms.TabControl();
             this.tbDanhSachLapTop = new System.Windows.Forms.TabPage();
+            this.flpDanhMucLapTop = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlDanhMucLuaChon = new System.Windows.Forms.Panel();
             this.cmbLoaiLaptop = new System.Windows.Forms.ComboBox();
             this.cmbCpu = new System.Windows.Forms.ComboBox();
             this.cmbRam = new System.Windows.Forms.ComboBox();
             this.cmbMucGia = new System.Windows.Forms.ComboBox();
-            this.btnLoc = new Guna.UI2.WinForms.Guna2Button();
-            this.tpThongTinChiTiet = new System.Windows.Forms.TabPage();
-            this.Panel = new System.Windows.Forms.Panel();
-            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.btnBoLoc = new Guna.UI2.WinForms.Guna2Button();
+            this.btnLoc = new Guna.UI2.WinForms.Guna2Button();
             this.btnMac = new Guna.UI2.WinForms.Guna2Button();
             this.btnMsi = new Guna.UI2.WinForms.Guna2Button();
             this.btnDell = new Guna.UI2.WinForms.Guna2Button();
@@ -53,7 +47,13 @@
             this.btnHP = new Guna.UI2.WinForms.Guna2Button();
             this.btnAcer = new Guna.UI2.WinForms.Guna2Button();
             this.btnAsus = new Guna.UI2.WinForms.Guna2Button();
-            this.flpDanhMucLapTop = new System.Windows.Forms.FlowLayoutPanel();
+            this.tpThongTinChiTiet = new System.Windows.Forms.TabPage();
+            this.Panel = new System.Windows.Forms.Panel();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.tcLaptop.SuspendLayout();
             this.tbDanhSachLapTop.SuspendLayout();
             this.pnlDanhMucLuaChon.SuspendLayout();
@@ -83,6 +83,16 @@
             this.tbDanhSachLapTop.Size = new System.Drawing.Size(947, 677);
             this.tbDanhSachLapTop.TabIndex = 0;
             this.tbDanhSachLapTop.Text = "Danh sách Laptop";
+            // 
+            // flpDanhMucLapTop
+            // 
+            this.flpDanhMucLapTop.AutoScroll = true;
+            this.flpDanhMucLapTop.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.flpDanhMucLapTop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flpDanhMucLapTop.Location = new System.Drawing.Point(3, 171);
+            this.flpDanhMucLapTop.Name = "flpDanhMucLapTop";
+            this.flpDanhMucLapTop.Size = new System.Drawing.Size(941, 503);
+            this.flpDanhMucLapTop.TabIndex = 3;
             // 
             // pnlDanhMucLuaChon
             // 
@@ -158,66 +168,6 @@
             this.cmbMucGia.TabIndex = 1;
             this.cmbMucGia.Text = "Mức giá";
             // 
-            // btnLoc
-            // 
-            this.btnLoc.BorderRadius = 15;
-            this.btnLoc.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnLoc.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnLoc.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnLoc.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnLoc.FillColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnLoc.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnLoc.ForeColor = System.Drawing.Color.Black;
-            this.btnLoc.Location = new System.Drawing.Point(838, 116);
-            this.btnLoc.Name = "btnLoc";
-            this.btnLoc.Size = new System.Drawing.Size(78, 36);
-            this.btnLoc.TabIndex = 0;
-            this.btnLoc.Text = "Lọc";
-            // 
-            // tpThongTinChiTiet
-            // 
-            this.tpThongTinChiTiet.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tpThongTinChiTiet.Location = new System.Drawing.Point(4, 4);
-            this.tpThongTinChiTiet.Name = "tpThongTinChiTiet";
-            this.tpThongTinChiTiet.Padding = new System.Windows.Forms.Padding(3);
-            this.tpThongTinChiTiet.Size = new System.Drawing.Size(947, 677);
-            this.tpThongTinChiTiet.TabIndex = 1;
-            this.tpThongTinChiTiet.Text = "Thông tin chi tiết";
-            // 
-            // Panel
-            // 
-            this.Panel.Controls.Add(this.tcLaptop);
-            this.Panel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Panel.Location = new System.Drawing.Point(0, 0);
-            this.Panel.Name = "Panel";
-            this.Panel.Size = new System.Drawing.Size(955, 710);
-            this.Panel.TabIndex = 2;
-            // 
-            // guna2Elipse1
-            // 
-            this.guna2Elipse1.BorderRadius = 30;
-            this.guna2Elipse1.TargetControl = this.pnlDanhMucLuaChon;
-            // 
-            // guna2Elipse2
-            // 
-            this.guna2Elipse2.BorderRadius = 15;
-            this.guna2Elipse2.TargetControl = this.cmbLoaiLaptop;
-            // 
-            // guna2Elipse3
-            // 
-            this.guna2Elipse3.BorderRadius = 15;
-            this.guna2Elipse3.TargetControl = this.cmbMucGia;
-            // 
-            // guna2Elipse4
-            // 
-            this.guna2Elipse4.BorderRadius = 15;
-            this.guna2Elipse4.TargetControl = this.cmbRam;
-            // 
-            // guna2Elipse5
-            // 
-            this.guna2Elipse5.BorderRadius = 15;
-            this.guna2Elipse5.TargetControl = this.cmbCpu;
-            // 
             // btnBoLoc
             // 
             this.btnBoLoc.BorderRadius = 15;
@@ -233,6 +183,24 @@
             this.btnBoLoc.Size = new System.Drawing.Size(99, 36);
             this.btnBoLoc.TabIndex = 0;
             this.btnBoLoc.Text = "Bỏ lọc";
+            this.btnBoLoc.Click += new System.EventHandler(this.btnBoLoc_Click);
+            // 
+            // btnLoc
+            // 
+            this.btnLoc.BorderRadius = 15;
+            this.btnLoc.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLoc.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLoc.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLoc.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLoc.FillColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnLoc.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnLoc.ForeColor = System.Drawing.Color.Black;
+            this.btnLoc.Location = new System.Drawing.Point(838, 116);
+            this.btnLoc.Name = "btnLoc";
+            this.btnLoc.Size = new System.Drawing.Size(78, 36);
+            this.btnLoc.TabIndex = 0;
+            this.btnLoc.Text = "Lọc";
+            this.btnLoc.Click += new System.EventHandler(this.btnLoc_Click);
             // 
             // btnMac
             // 
@@ -382,15 +350,49 @@
             this.btnAsus.Size = new System.Drawing.Size(180, 45);
             this.btnAsus.TabIndex = 0;
             // 
-            // flpDanhMucLapTop
+            // tpThongTinChiTiet
             // 
-            this.flpDanhMucLapTop.AutoScroll = true;
-            this.flpDanhMucLapTop.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.flpDanhMucLapTop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flpDanhMucLapTop.Location = new System.Drawing.Point(3, 171);
-            this.flpDanhMucLapTop.Name = "flpDanhMucLapTop";
-            this.flpDanhMucLapTop.Size = new System.Drawing.Size(941, 503);
-            this.flpDanhMucLapTop.TabIndex = 3;
+            this.tpThongTinChiTiet.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.tpThongTinChiTiet.Location = new System.Drawing.Point(4, 4);
+            this.tpThongTinChiTiet.Name = "tpThongTinChiTiet";
+            this.tpThongTinChiTiet.Padding = new System.Windows.Forms.Padding(3);
+            this.tpThongTinChiTiet.Size = new System.Drawing.Size(947, 677);
+            this.tpThongTinChiTiet.TabIndex = 1;
+            this.tpThongTinChiTiet.Text = "Thông tin chi tiết";
+            // 
+            // Panel
+            // 
+            this.Panel.Controls.Add(this.tcLaptop);
+            this.Panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Panel.Location = new System.Drawing.Point(0, 0);
+            this.Panel.Name = "Panel";
+            this.Panel.Size = new System.Drawing.Size(955, 710);
+            this.Panel.TabIndex = 2;
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 30;
+            this.guna2Elipse1.TargetControl = this.pnlDanhMucLuaChon;
+            // 
+            // guna2Elipse2
+            // 
+            this.guna2Elipse2.BorderRadius = 15;
+            this.guna2Elipse2.TargetControl = this.cmbLoaiLaptop;
+            // 
+            // guna2Elipse3
+            // 
+            this.guna2Elipse3.BorderRadius = 15;
+            this.guna2Elipse3.TargetControl = this.cmbMucGia;
+            // 
+            // guna2Elipse4
+            // 
+            this.guna2Elipse4.BorderRadius = 15;
+            this.guna2Elipse4.TargetControl = this.cmbRam;
+            // 
+            // guna2Elipse5
+            // 
+            this.guna2Elipse5.BorderRadius = 15;
+            this.guna2Elipse5.TargetControl = this.cmbCpu;
             // 
             // UserControLaptop
             // 

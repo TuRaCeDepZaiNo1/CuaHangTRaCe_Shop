@@ -1,4 +1,5 @@
 ﻿using CuaHangTRaCe_Shop.DataBase;
+using CuaHangTRaCe_Shop.Models;
 using Microsoft.VisualBasic;
 using System;
 using System.Collections.Generic;
@@ -136,6 +137,34 @@ namespace CuaHangTRaCe_Shop.Views
             FillCPU();
             FillRam();
             FillLoaiLaptop();
+        }
+
+        private void btnBoLoc_Click(object sender, EventArgs e)
+        {
+            LoadForm();
+        }
+
+        private void btnLoc_Click(object sender, EventArgs e)
+        {
+            using(var db = new TRaCe_Shop())
+            {
+                if (cmbLoaiLaptop.Text != null)
+                {
+                    if (cmbLoaiLaptop.Text == "Gaming")
+                    {
+                        string tim = "1";
+                        List<LapTop> lapTops = new List<LapTop>();
+                        lapTops = db.LapTops.Where(p => p.ID_LoaiLapTop == tim).ToList();
+                        flpDanhMucLapTop.Controls.Clear();
+                        foreach (var item in lapTops)
+                        {
+                            UserControlSanPhamLaptop user = new UserControlSanPhamLaptop(ConvertBinaryDataToImage(item.HinhAnh), item.TenLapTop, ChuyenRam(item.ID_Ram), ChuyenCPU(item.ID_CPU));
+                            flpDanhMucLapTop.Controls.Add(user);
+                        }
+                    }
+                }
+            }
+            
         }
     }
 }
