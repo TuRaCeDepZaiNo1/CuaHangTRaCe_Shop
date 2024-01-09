@@ -156,6 +156,74 @@ namespace CuaHangTRaCe_Shop.Views
             FillLoaiLaptop();
         }
 
+        public void TimKiem(string loai)
+        {
+            using (var db = new TRaCe_Shop())
+            {
+                if (loai == "Gaming")
+                {
+                    string tim = "1";
+                    List<LapTop> lapTops = new List<LapTop>();
+                    lapTops = db.LapTops.Where(p => p.ID_LoaiLapTop == tim).ToList();
+                    flpDanhMucLapTop.Controls.Clear();
+                    foreach (var item in lapTops)
+                    {
+                        UserControlSanPhamLaptop user = new UserControlSanPhamLaptop(ConvertBinaryDataToImage(item.HinhAnh), item.TenLapTop, ChuyenRam(item.ID_Ram), ChuyenCPU(item.ID_CPU));
+                        flpDanhMucLapTop.Controls.Add(user);
+                    }
+                }
+                else if (loai == "Macbook")
+                {
+                    string tim = "2";
+                    List<LapTop> lapTops = new List<LapTop>();
+                    lapTops = db.LapTops.Where(p => p.ID_LoaiLapTop == tim).ToList();
+                    flpDanhMucLapTop.Controls.Clear();
+                    foreach (var item in lapTops)
+                    {
+                        UserControlSanPhamLaptop user = new UserControlSanPhamLaptop(ConvertBinaryDataToImage(item.HinhAnh), item.TenLapTop, ChuyenRam(item.ID_Ram), ChuyenCPU(item.ID_CPU));
+                        flpDanhMucLapTop.Controls.Add(user);
+                    }
+                }
+                else if (loai == "Mỏng nhẹ")
+                {
+                    string tim = "3";
+                    List<LapTop> lapTops = new List<LapTop>();
+                    lapTops = db.LapTops.Where(p => p.ID_LoaiLapTop == tim).ToList();
+                    flpDanhMucLapTop.Controls.Clear();
+                    foreach (var item in lapTops)
+                    {
+                        UserControlSanPhamLaptop user = new UserControlSanPhamLaptop(ConvertBinaryDataToImage(item.HinhAnh), item.TenLapTop, ChuyenRam(item.ID_Ram), ChuyenCPU(item.ID_CPU));
+                        flpDanhMucLapTop.Controls.Add(user);
+                    }
+                }
+                else if (loai == "Đồ họa, thiết kế")
+                {
+                    string tim = "4";
+                    List<LapTop> lapTops = new List<LapTop>();
+                    lapTops = db.LapTops.Where(p => p.ID_LoaiLapTop == tim).ToList();
+                    flpDanhMucLapTop.Controls.Clear();
+                    foreach (var item in lapTops)
+                    {
+                        UserControlSanPhamLaptop user = new UserControlSanPhamLaptop(ConvertBinaryDataToImage(item.HinhAnh), item.TenLapTop, ChuyenRam(item.ID_Ram), ChuyenCPU(item.ID_CPU));
+                        flpDanhMucLapTop.Controls.Add(user);
+                    }
+                }
+                else if (loai == "Sang trọng")
+                {
+                    string tim = "5";
+                    List<LapTop> lapTops = new List<LapTop>();
+                    lapTops = db.LapTops.Where(p => p.ID_LoaiLapTop == tim).ToList();
+                    flpDanhMucLapTop.Controls.Clear();
+                    foreach (var item in lapTops)
+                    {
+                        UserControlSanPhamLaptop user = new UserControlSanPhamLaptop(ConvertBinaryDataToImage(item.HinhAnh), item.TenLapTop, ChuyenRam(item.ID_Ram), ChuyenCPU(item.ID_CPU));
+                        flpDanhMucLapTop.Controls.Add(user);
+                    }
+                }
+
+            }
+        }
+
         private void btnBoLoc_Click(object sender, EventArgs e)
         {
             LoadForm();

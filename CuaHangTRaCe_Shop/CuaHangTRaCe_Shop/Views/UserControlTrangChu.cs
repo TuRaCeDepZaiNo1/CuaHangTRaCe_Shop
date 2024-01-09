@@ -25,12 +25,13 @@ namespace CuaHangTRaCe_Shop.Views
         {
             using (var db = new TRaCe_Shop())
             {
+                string loai = "Gaming";
                 this.Hide();
                 MainForm mainForm = Application.OpenForms.OfType<MainForm>().FirstOrDefault();
 
                 if (mainForm != null)
                 {
-                    
+                    mainForm.TimKiemLoai(loai);
                 }
             }
         }

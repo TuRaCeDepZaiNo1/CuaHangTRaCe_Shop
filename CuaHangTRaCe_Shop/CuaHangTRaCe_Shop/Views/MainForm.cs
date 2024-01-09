@@ -96,6 +96,17 @@ namespace CuaHangTRaCe_Shop.Views
             userlaptop.LoadForm();
         }
 
+        public void TimKiemLoai(string loai)
+        {
+            pnlDanhMucSanPham.Visible = false;
+            lblHienThi.Text = "Danh Mục Sản Phẩm / Laptop";
+            txtSearch.Text = string.Empty;
+            userlaptop.Visible = true;
+            usertrangchu.Visible = false;
+            userthuonghieu.Visible = false;
+            userlaptop.TimKiem(loai);
+        }
+
         private void btnPhuKien_Click(object sender, EventArgs e)
         {
             pnlDanhMucSanPham.Visible = false;
