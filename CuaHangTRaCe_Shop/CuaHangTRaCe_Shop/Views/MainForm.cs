@@ -1,4 +1,5 @@
 ﻿using CuaHangTRaCe_Shop.DataBase;
+using CuaHangTRaCe_Shop.Models;
 using Microsoft.VisualBasic.ApplicationServices;
 using System;
 using System.Collections.Generic;
@@ -26,8 +27,7 @@ namespace CuaHangTRaCe_Shop.Views
         UserControlTrangChu usertrangchu = new UserControlTrangChu();
         UserControlDanhSachThuongHieu userthuonghieu = new UserControlDanhSachThuongHieu();
         UserControLaptop userlaptop = new UserControLaptop();
-        
-        
+
 
         public MainForm(string HoTen, string ChucVu) : this()
         {
@@ -83,8 +83,6 @@ namespace CuaHangTRaCe_Shop.Views
             pnlQuanLi.Visible = false;
             lblHienThi.Text = "Danh Mục Sản Phẩm";
             txtSearch.Text = string.Empty;
-
-
         }
 
         private void btnLaptop_Click(object sender, EventArgs e)
@@ -158,7 +156,6 @@ namespace CuaHangTRaCe_Shop.Views
             pnlLienHe.Visible = false;
             lblHienThi.Text = "Giỏ Hàng";
             txtSearch.Text = string.Empty;
-
         }
 
         private void btnThanhToan_Click(object sender, EventArgs e)
@@ -289,4 +286,5 @@ namespace CuaHangTRaCe_Shop.Views
             }
         }
     }
+
 }

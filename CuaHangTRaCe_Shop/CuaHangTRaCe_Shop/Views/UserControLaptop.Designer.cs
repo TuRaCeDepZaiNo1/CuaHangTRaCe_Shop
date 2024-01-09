@@ -223,6 +223,7 @@
             this.btnMac.TabIndex = 0;
             this.btnMac.Text = "MACBOOK";
             this.btnMac.TextOffset = new System.Drawing.Point(10, 0);
+            this.btnMac.Click += new System.EventHandler(this.btnMac_Click);
             // 
             // btnMsi
             // 
@@ -241,6 +242,7 @@
             this.btnMsi.Name = "btnMsi";
             this.btnMsi.Size = new System.Drawing.Size(180, 45);
             this.btnMsi.TabIndex = 0;
+            this.btnMsi.Click += new System.EventHandler(this.btnMsi_Click);
             // 
             // btnDell
             // 
@@ -259,6 +261,7 @@
             this.btnDell.Name = "btnDell";
             this.btnDell.Size = new System.Drawing.Size(180, 45);
             this.btnDell.TabIndex = 0;
+            this.btnDell.Click += new System.EventHandler(this.btnDell_Click);
             // 
             // btnGigabyte
             // 
@@ -277,6 +280,7 @@
             this.btnGigabyte.Name = "btnGigabyte";
             this.btnGigabyte.Size = new System.Drawing.Size(180, 45);
             this.btnGigabyte.TabIndex = 0;
+            this.btnGigabyte.Click += new System.EventHandler(this.btnGigabyte_Click);
             // 
             // btnLenovo
             // 
@@ -295,6 +299,7 @@
             this.btnLenovo.Name = "btnLenovo";
             this.btnLenovo.Size = new System.Drawing.Size(180, 45);
             this.btnLenovo.TabIndex = 0;
+            this.btnLenovo.Click += new System.EventHandler(this.btnLenovo_Click);
             // 
             // btnHP
             // 
@@ -313,6 +318,7 @@
             this.btnHP.Name = "btnHP";
             this.btnHP.Size = new System.Drawing.Size(180, 45);
             this.btnHP.TabIndex = 0;
+            this.btnHP.Click += new System.EventHandler(this.btnHP_Click);
             // 
             // btnAcer
             // 
@@ -331,6 +337,7 @@
             this.btnAcer.Name = "btnAcer";
             this.btnAcer.Size = new System.Drawing.Size(180, 45);
             this.btnAcer.TabIndex = 0;
+            this.btnAcer.Click += new System.EventHandler(this.btnAcer_Click);
             // 
             // btnAsus
             // 
@@ -349,6 +356,7 @@
             this.btnAsus.Name = "btnAsus";
             this.btnAsus.Size = new System.Drawing.Size(180, 45);
             this.btnAsus.TabIndex = 0;
+            this.btnAsus.Click += new System.EventHandler(this.btnAsus_Click);
             // 
             // tpThongTinChiTiet
             // 
