@@ -38,22 +38,62 @@ namespace CuaHangTRaCe_Shop.Views
 
         private void btnMacbook_Click(object sender, EventArgs e)
         {
+            using (var db = new TRaCe_Shop())
+            {
+                string loai = "Macbook";
+                this.Hide();
+                MainForm mainForm = Application.OpenForms.OfType<MainForm>().FirstOrDefault();
 
+                if (mainForm != null)
+                {
+                    mainForm.TimKiemLoai(loai);
+                }
+            }
         }
 
         private void btnMongNhe_Click(object sender, EventArgs e)
         {
+            using (var db = new TRaCe_Shop())
+            {
+                string loai = "Mỏng nhẹ";
+                this.Hide();
+                MainForm mainForm = Application.OpenForms.OfType<MainForm>().FirstOrDefault();
 
+                if (mainForm != null)
+                {
+                    mainForm.TimKiemLoai(loai);
+                }
+            }
         }
 
         private void btnDoHoa_Click(object sender, EventArgs e)
         {
+            using (var db = new TRaCe_Shop())
+            {
+                string loai = "Đồ họa, thiết kế";
+                this.Hide();
+                MainForm mainForm = Application.OpenForms.OfType<MainForm>().FirstOrDefault();
 
+                if (mainForm != null)
+                {
+                    mainForm.TimKiemLoai(loai);
+                }
+            }
         }
 
         private void btnSangTrong_Click(object sender, EventArgs e)
         {
+            using (var db = new TRaCe_Shop())
+            {
+                string loai = "Sang trọng";
+                this.Hide();
+                MainForm mainForm = Application.OpenForms.OfType<MainForm>().FirstOrDefault();
 
+                if (mainForm != null)
+                {
+                    mainForm.TimKiemLoai(loai);
+                }
+            }
         }
 
         private void btnChuot_Click(object sender, EventArgs e)

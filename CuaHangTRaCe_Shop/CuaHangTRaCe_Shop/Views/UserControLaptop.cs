@@ -163,6 +163,7 @@ namespace CuaHangTRaCe_Shop.Views
                 if (loai == "Gaming")
                 {
                     string tim = "1";
+                    cmbLoaiLaptop.Text = "Gaming";
                     List<LapTop> lapTops = new List<LapTop>();
                     lapTops = db.LapTops.Where(p => p.ID_LoaiLapTop == tim).ToList();
                     flpDanhMucLapTop.Controls.Clear();
@@ -175,6 +176,7 @@ namespace CuaHangTRaCe_Shop.Views
                 else if (loai == "Macbook")
                 {
                     string tim = "2";
+                    cmbLoaiLaptop.Text = "Macbook";
                     List<LapTop> lapTops = new List<LapTop>();
                     lapTops = db.LapTops.Where(p => p.ID_LoaiLapTop == tim).ToList();
                     flpDanhMucLapTop.Controls.Clear();
@@ -187,6 +189,7 @@ namespace CuaHangTRaCe_Shop.Views
                 else if (loai == "Mỏng nhẹ")
                 {
                     string tim = "3";
+                    cmbLoaiLaptop.Text = "Mỏng nhẹ";
                     List<LapTop> lapTops = new List<LapTop>();
                     lapTops = db.LapTops.Where(p => p.ID_LoaiLapTop == tim).ToList();
                     flpDanhMucLapTop.Controls.Clear();
@@ -199,6 +202,7 @@ namespace CuaHangTRaCe_Shop.Views
                 else if (loai == "Đồ họa, thiết kế")
                 {
                     string tim = "4";
+                    cmbLoaiLaptop.Text = "Đồ họa, thiết kế";
                     List<LapTop> lapTops = new List<LapTop>();
                     lapTops = db.LapTops.Where(p => p.ID_LoaiLapTop == tim).ToList();
                     flpDanhMucLapTop.Controls.Clear();
@@ -211,6 +215,7 @@ namespace CuaHangTRaCe_Shop.Views
                 else if (loai == "Sang trọng")
                 {
                     string tim = "5";
+                    cmbLoaiLaptop.Text = "Sang trọng";
                     List<LapTop> lapTops = new List<LapTop>();
                     lapTops = db.LapTops.Where(p => p.ID_LoaiLapTop == tim).ToList();
                     flpDanhMucLapTop.Controls.Clear();

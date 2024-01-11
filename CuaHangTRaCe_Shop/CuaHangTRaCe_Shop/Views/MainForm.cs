@@ -105,6 +105,7 @@ namespace CuaHangTRaCe_Shop.Views
             usertrangchu.Visible = false;
             userthuonghieu.Visible = false;
             userlaptop.TimKiem(loai);
+            
         }
 
         private void btnPhuKien_Click(object sender, EventArgs e)
