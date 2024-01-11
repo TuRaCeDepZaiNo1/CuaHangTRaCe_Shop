@@ -224,6 +224,201 @@ namespace CuaHangTRaCe_Shop.Views
             }
         }
 
+        /*
+         * flpDanhMucLapTop.Controls.Clear();
+         foreach (var item in laptops1)
+                        {
+                            UserControlSanPhamLaptop user = new UserControlSanPhamLaptop(ConvertBinaryDataToImage(item.HinhAnh), item.TenLapTop, ChuyenRam(item.ID_Ram), ChuyenCPU(item.ID_CPU));
+                            flpDanhMucLapTop.Controls.Add(user);
+                        }
+         */
+
+        public List<LapTop> LocChucNang(List<LapTop> laptops)
+        {
+            List<LapTop> laptops1 = new List<LapTop>();
+            if (cmbLoaiLaptop.Text != null && cmbLoaiLaptop.Text != "Loại Laptop")
+            {
+                if (cmbLoaiLaptop.Text == "Gaming")
+                {
+                    string tim = "1";
+                    laptops1 = laptops.Where(p => p.ID_LoaiLapTop == tim).ToList();
+                }
+                else if (cmbLoaiLaptop.Text == "Macbook")
+                {
+                    string tim = "2";
+                    laptops1 = laptops.Where(p => p.ID_LoaiLapTop == tim).ToList();
+                }
+                else if (cmbLoaiLaptop.Text == "Mỏng nhẹ")
+                {
+                    string tim = "3";
+                    laptops1 = laptops.Where(p => p.ID_LoaiLapTop == tim).ToList();
+                }
+                else if (cmbLoaiLaptop.Text == "Đồ họa, thiết kế")
+                {
+                    string tim = "4";
+                    laptops1 = laptops.Where(p => p.ID_LoaiLapTop == tim).ToList();
+                }
+                else if (cmbLoaiLaptop.Text == "Sang trọng")
+                {
+                    string tim = "5";
+                    laptops1 = laptops.Where(p => p.ID_LoaiLapTop == tim).ToList();
+                }
+            }
+            else 
+            {
+                return laptops;
+            }
+            return laptops1;
+        }
+
+        public List<LapTop> LocMucGia(List<LapTop> lapTops)
+        {
+            List<LapTop> lapTop1 = new List<LapTop>();
+            if (cmbMucGia.Text != null && cmbMucGia.Text != "Mức giá")
+            {
+                if (cmbMucGia.Text == "Dưới 10 triệu")
+                {
+                    lapTop1 = lapTops.Where(p => p.GiaBan < 10000000).ToList();
+                }
+                else if (cmbMucGia.Text == "10 - 15 triệu")
+                {
+                    lapTop1 = lapTops.Where(p => p.GiaBan >= 10000000 && p.GiaBan <= 15000000).ToList();
+                }
+                else if (cmbMucGia.Text == "15 - 20 triệu")
+                {
+                    lapTop1 = lapTops.Where(p => p.GiaBan >= 15000000 && p.GiaBan <= 20000000).ToList();
+                }
+                else if (cmbMucGia.Text == "20 - 25 triệu")
+                {
+                    lapTop1 = lapTops.Where(p => p.GiaBan >= 20000000 && p.GiaBan <= 25000000).ToList();
+                }
+                else if (cmbMucGia.Text == "25 - 30 triệu")
+                {
+                    lapTop1 = lapTops.Where(p => p.GiaBan >= 25000000 && p.GiaBan <= 30000000).ToList();
+                }
+                else if (cmbMucGia.Text == "Trên 30 triệu")
+                {
+                    lapTop1 = lapTops.Where(p => p.GiaBan > 30000000).ToList();
+                }
+            }
+            else 
+            {
+                return lapTops;
+            }
+            return lapTop1;
+        }
+
+        public List<LapTop> LocRam(List<LapTop> lapTops)
+        {
+            List<LapTop> list = new List<LapTop>();
+            if (cmbRam.Text != null && cmbRam.Text != "Ram")
+            {
+                if (cmbRam.Text == "DDR3(8)")
+                {
+                    string ram = "R1";
+                    list = lapTops.Where(p => p.ID_Ram == ram).ToList();
+                }
+                else if (cmbRam.Text == "DDR3(16)")
+                {
+                    string ram = "R2";
+                    list = lapTops.Where(p => p.ID_Ram == ram).ToList();
+                }
+                else if (cmbRam.Text == "DDR4(8)")
+                {
+                    string ram = "R3";
+                    list = lapTops.Where(p => p.ID_Ram == ram).ToList();
+                }
+                else if (cmbRam.Text == "DDR4(16)")
+                {
+                    string ram = "R4";
+                    list = lapTops.Where(p => p.ID_Ram == ram).ToList();
+                }
+            }
+            else
+            {
+                return lapTops;
+            }
+            return list;
+        }
+
+        public List<LapTop> LocCpu(List<LapTop> lapTops)
+        {
+            List<LapTop> list = new List<LapTop>();
+            if (cmbCpu.Text != null && cmbCpu.Text != "CPU")
+            {
+                if (cmbCpu.Text == "Intel Core i3")
+                {
+                    string cpu = "CPU1";
+                    list = lapTops.Where(p => p.ID_CPU == cpu).ToList();
+                }
+                else if (cmbCpu.Text == "Intel Core i5")
+                {
+                    string cpu = "CPU2";
+                    list = lapTops.Where(p => p.ID_CPU == cpu).ToList();
+                }
+                else if (cmbCpu.Text == "Intel Core i7")
+                {
+                    string cpu = "CPU3";
+                    list = lapTops.Where(p => p.ID_CPU == cpu).ToList();
+                }
+                else if (cmbCpu.Text == "Intel Core i9")
+                {
+                    string cpu = "CPU4";
+                    list = lapTops.Where(p => p.ID_CPU == cpu).ToList();
+                }
+                else if (cmbCpu.Text == "AMD Ryzen 3")
+                {
+                    string cpu = "CPU5";
+                    list = lapTops.Where(p => p.ID_CPU == cpu).ToList();
+                }
+                else if (cmbCpu.Text == "AMD Ryzen 5")
+                {
+                    string cpu = "CPU6";
+                    list = lapTops.Where(p => p.ID_CPU == cpu).ToList();
+                }
+                else if (cmbCpu.Text == "AMD Ryzen 7")
+                {
+                    string cpu = "CPU7";
+                    list = lapTops.Where(p => p.ID_CPU == cpu).ToList();
+                }
+                else if (cmbCpu.Text == "AMD Ryzen 9")
+                {
+                    string cpu = "CPU8";
+                    list = lapTops.Where(p => p.ID_CPU == cpu).ToList();
+                }
+                else if (cmbCpu.Text == "Apple M1")
+                {
+                    string cpu = "CPU10";
+                    list = lapTops.Where(p => p.ID_CPU == cpu).ToList();
+                }
+                else if (cmbCpu.Text == "Apple M2")
+                {
+                    string cpu = "CPU11";
+                    list = lapTops.Where(p => p.ID_CPU == cpu).ToList();
+                }
+                else if (cmbCpu.Text == "Apple M2 Pro")
+                {
+                    string cpu = "CPU12";
+                    list = lapTops.Where(p => p.ID_CPU == cpu).ToList();
+                }
+                else if (cmbCpu.Text == "Apple M3")
+                {
+                    string cpu = "CPU13";
+                    list = lapTops.Where(p => p.ID_CPU == cpu).ToList();
+                }
+                else if (cmbCpu.Text == "Apple M3 MAX")
+                {
+                    string cpu = "CPU14";
+                    list = lapTops.Where(p => p.ID_CPU == cpu).ToList();
+                }
+            }
+            else
+            {
+                return lapTops;
+            }
+            return list;
+        }
+
         private void btnBoLoc_Click(object sender, EventArgs e)
         {
             LoadForm();
@@ -233,352 +428,28 @@ namespace CuaHangTRaCe_Shop.Views
 
         private void btnLoc_Click(object sender, EventArgs e)
         {
-            using(var db = new TRaCe_Shop())
+            List<LapTop> list = new List<LapTop>();
+            List<LapTop> list0 = new List<LapTop>();
+            List<LapTop> list1 = new List<LapTop>();
+            List<LapTop> list2 = new List<LapTop>();
+            List<LapTop> list3 = new List<LapTop>();
+            using (var db = new TRaCe_Shop())
             {
-                if (cmbLoaiLaptop.Text != null && cmbLoaiLaptop.Text != "Loại laptop")
+                if (cmbLoaiLaptop.Text != "Loại Laptop" || cmbMucGia.Text != "Mức giá" || cmbRam.Text != "Ram" || cmbCpu.Text != "CPU")
                 {
-                    if (cmbLoaiLaptop.Text == "Gaming")
+                    list = db.LapTops.ToList();
+                    list0 = LocChucNang(list);
+                    list1 = LocMucGia(list0);
+                    list2 = LocRam(list1);
+                    list3 = LocCpu(list2);
+                    flpDanhMucLapTop.Controls.Clear();
+                    foreach (var item in list3)
                     {
-                        string tim = "1";
-                        List<LapTop> lapTops = new List<LapTop>();
-                        lapTops = db.LapTops.Where(p => p.ID_LoaiLapTop == tim).ToList();
-                        flpDanhMucLapTop.Controls.Clear();
-                        foreach (var item in lapTops)
-                        {
-                            UserControlSanPhamLaptop user = new UserControlSanPhamLaptop(ConvertBinaryDataToImage(item.HinhAnh), item.TenLapTop, ChuyenRam(item.ID_Ram), ChuyenCPU(item.ID_CPU));
-                            flpDanhMucLapTop.Controls.Add(user);
-                        }
-                    }
-                    else if (cmbLoaiLaptop.Text == "Macbook")
-                    {
-                        string tim = "2";
-                        List<LapTop> lapTops = new List<LapTop>();
-                        lapTops = db.LapTops.Where(p => p.ID_LoaiLapTop == tim).ToList();
-                        flpDanhMucLapTop.Controls.Clear();
-                        foreach (var item in lapTops)
-                        {
-                            UserControlSanPhamLaptop user = new UserControlSanPhamLaptop(ConvertBinaryDataToImage(item.HinhAnh), item.TenLapTop, ChuyenRam(item.ID_Ram), ChuyenCPU(item.ID_CPU));
-                            flpDanhMucLapTop.Controls.Add(user);
-                        }
-                    }
-                    else if (cmbLoaiLaptop.Text == "Mỏng nhẹ")
-                    {
-                        string tim = "3";
-                        List<LapTop> lapTops = new List<LapTop>();
-                        lapTops = db.LapTops.Where(p => p.ID_LoaiLapTop == tim).ToList();
-                        flpDanhMucLapTop.Controls.Clear();
-                        foreach (var item in lapTops)
-                        {
-                            UserControlSanPhamLaptop user = new UserControlSanPhamLaptop(ConvertBinaryDataToImage(item.HinhAnh), item.TenLapTop, ChuyenRam(item.ID_Ram), ChuyenCPU(item.ID_CPU));
-                            flpDanhMucLapTop.Controls.Add(user);
-                        }
-                    }
-                    else if (cmbLoaiLaptop.Text == "Đồ họa, thiết kế")
-                    {
-                        string tim = "4";
-                        List<LapTop> lapTops = new List<LapTop>();
-                        lapTops = db.LapTops.Where(p => p.ID_LoaiLapTop == tim).ToList();
-                        flpDanhMucLapTop.Controls.Clear();
-                        foreach (var item in lapTops)
-                        {
-                            UserControlSanPhamLaptop user = new UserControlSanPhamLaptop(ConvertBinaryDataToImage(item.HinhAnh), item.TenLapTop, ChuyenRam(item.ID_Ram), ChuyenCPU(item.ID_CPU));
-                            flpDanhMucLapTop.Controls.Add(user);
-                        }
-                    }
-                    else if (cmbLoaiLaptop.Text == "Sang trọng")
-                    {
-                        string tim = "5";
-                        List<LapTop> lapTops = new List<LapTop>();
-                        lapTops = db.LapTops.Where(p => p.ID_LoaiLapTop == tim).ToList();
-                        flpDanhMucLapTop.Controls.Clear();
-                        foreach (var item in lapTops)
-                        {
-                            UserControlSanPhamLaptop user = new UserControlSanPhamLaptop(ConvertBinaryDataToImage(item.HinhAnh), item.TenLapTop, ChuyenRam(item.ID_Ram), ChuyenCPU(item.ID_CPU));
-                            flpDanhMucLapTop.Controls.Add(user);
-                        }
-                    }
-                }
-                if(cmbMucGia.Text != null && cmbMucGia.Text != "Mức giá")
-                {
-                    if(cmbMucGia.Text == "Dưới 10 triệu")
-                    {
-                        List<LapTop> lapTops = new List<LapTop>();
-                        lapTops = db.LapTops.Where(p => p.GiaBan < 10000000).ToList();
-                        flpDanhMucLapTop.Controls.Clear();
-                        foreach (var item in lapTops)
-                        {
-                            UserControlSanPhamLaptop user = new UserControlSanPhamLaptop(ConvertBinaryDataToImage(item.HinhAnh), item.TenLapTop, ChuyenRam(item.ID_Ram), ChuyenCPU(item.ID_CPU));
-                            flpDanhMucLapTop.Controls.Add(user);
-                        }
-                    }
-                    else if (cmbMucGia.Text == "10 - 15 triệu")
-                    {
-                        List<LapTop> lapTops = new List<LapTop>();
-                        lapTops = db.LapTops.Where(p => p.GiaBan >= 10000000 && p.GiaBan <= 15000000).ToList();
-                        flpDanhMucLapTop.Controls.Clear();
-                        foreach (var item in lapTops)
-                        {
-                            UserControlSanPhamLaptop user = new UserControlSanPhamLaptop(ConvertBinaryDataToImage(item.HinhAnh), item.TenLapTop, ChuyenRam(item.ID_Ram), ChuyenCPU(item.ID_CPU));
-                            flpDanhMucLapTop.Controls.Add(user);
-                        }
-                    }
-                    else if (cmbMucGia.Text == "15 - 20 triệu")
-                    {
-                        List<LapTop> lapTops = new List<LapTop>();
-                        lapTops = db.LapTops.Where(p => p.GiaBan >= 15000000 && p.GiaBan <= 20000000).ToList();
-                        flpDanhMucLapTop.Controls.Clear();
-                        foreach (var item in lapTops)
-                        {
-                            UserControlSanPhamLaptop user = new UserControlSanPhamLaptop(ConvertBinaryDataToImage(item.HinhAnh), item.TenLapTop, ChuyenRam(item.ID_Ram), ChuyenCPU(item.ID_CPU));
-                            flpDanhMucLapTop.Controls.Add(user);
-                        }
-                    }
-                    else if (cmbMucGia.Text == "20 - 25 triệu")
-                    {
-                        List<LapTop> lapTops = new List<LapTop>();
-                        lapTops = db.LapTops.Where(p => p.GiaBan >= 20000000 && p.GiaBan <= 25000000).ToList();
-                        flpDanhMucLapTop.Controls.Clear();
-                        foreach (var item in lapTops)
-                        {
-                            UserControlSanPhamLaptop user = new UserControlSanPhamLaptop(ConvertBinaryDataToImage(item.HinhAnh), item.TenLapTop, ChuyenRam(item.ID_Ram), ChuyenCPU(item.ID_CPU));
-                            flpDanhMucLapTop.Controls.Add(user);
-                        }
-                    }
-                    else if (cmbMucGia.Text == "25 - 30 triệu")
-                    {
-                        List<LapTop> lapTops = new List<LapTop>();
-                        lapTops = db.LapTops.Where(p => p.GiaBan >= 25000000 && p.GiaBan <= 30000000).ToList();
-                        flpDanhMucLapTop.Controls.Clear();
-                        foreach (var item in lapTops)
-                        {
-                            UserControlSanPhamLaptop user = new UserControlSanPhamLaptop(ConvertBinaryDataToImage(item.HinhAnh), item.TenLapTop, ChuyenRam(item.ID_Ram), ChuyenCPU(item.ID_CPU));
-                            flpDanhMucLapTop.Controls.Add(user);
-                        }
-                    }
-                    else if (cmbMucGia.Text == "Trên 30 triệu")
-                    {
-                        List<LapTop> lapTops = new List<LapTop>();
-                        lapTops = db.LapTops.Where(p => p.GiaBan > 30000000).ToList();
-                        flpDanhMucLapTop.Controls.Clear();
-                        foreach (var item in lapTops)
-                        {
-                            UserControlSanPhamLaptop user = new UserControlSanPhamLaptop(ConvertBinaryDataToImage(item.HinhAnh), item.TenLapTop, ChuyenRam(item.ID_Ram), ChuyenCPU(item.ID_CPU));
-                            flpDanhMucLapTop.Controls.Add(user);
-                        }
-                    }
-                }
-                if (cmbRam.Text != null && cmbRam.Text != "Ram")
-                {
-                    if (cmbRam.Text == "DDR3(8)")
-                    {
-                        string ram = "R1";
-                        List<LapTop> lapTops = new List<LapTop>();
-                        lapTops = db.LapTops.Where(p => p.ID_Ram == ram).ToList();
-                        flpDanhMucLapTop.Controls.Clear();
-                        foreach (var item in lapTops)
-                        {
-                            UserControlSanPhamLaptop user = new UserControlSanPhamLaptop(ConvertBinaryDataToImage(item.HinhAnh), item.TenLapTop, ChuyenRam(item.ID_Ram), ChuyenCPU(item.ID_CPU));
-                            flpDanhMucLapTop.Controls.Add(user);
-                        }
-                    }
-                    else if (cmbRam.Text == "DDR3(16)")
-                    {
-                        string ram = "R2";
-                        List<LapTop> lapTops = new List<LapTop>();
-                        lapTops = db.LapTops.Where(p => p.ID_Ram == ram).ToList();
-                        flpDanhMucLapTop.Controls.Clear();
-                        foreach (var item in lapTops)
-                        {
-                            UserControlSanPhamLaptop user = new UserControlSanPhamLaptop(ConvertBinaryDataToImage(item.HinhAnh), item.TenLapTop, ChuyenRam(item.ID_Ram), ChuyenCPU(item.ID_CPU));
-                            flpDanhMucLapTop.Controls.Add(user);
-                        }
-                    }
-                    else if (cmbRam.Text == "DDR4(8)")
-                    {
-                        string ram = "R3";
-                        List<LapTop> lapTops = new List<LapTop>();
-                        lapTops = db.LapTops.Where(p => p.ID_Ram == ram).ToList();
-                        flpDanhMucLapTop.Controls.Clear();
-                        foreach (var item in lapTops)
-                        {
-                            UserControlSanPhamLaptop user = new UserControlSanPhamLaptop(ConvertBinaryDataToImage(item.HinhAnh), item.TenLapTop, ChuyenRam(item.ID_Ram), ChuyenCPU(item.ID_CPU));
-                            flpDanhMucLapTop.Controls.Add(user);
-                        }
-                    }
-                    else if (cmbRam.Text == "DDR4(16)")
-                    {
-                        string ram = "R4";
-                        List<LapTop> lapTops = new List<LapTop>();
-                        lapTops = db.LapTops.Where(p => p.ID_Ram == ram).ToList();
-                        flpDanhMucLapTop.Controls.Clear();
-                        foreach (var item in lapTops)
-                        {
-                            UserControlSanPhamLaptop user = new UserControlSanPhamLaptop(ConvertBinaryDataToImage(item.HinhAnh), item.TenLapTop, ChuyenRam(item.ID_Ram), ChuyenCPU(item.ID_CPU));
-                            flpDanhMucLapTop.Controls.Add(user);
-                        }
-                    }
-                }
-                if (cmbCpu.Text != null && cmbCpu.Text != "CPU")
-                {
-                    if (cmbCpu.Text == "Intel Core i3")
-                    {
-                        string cpu = "CPU1";
-                        List<LapTop> lapTops = new List<LapTop>();
-                        lapTops = db.LapTops.Where(p => p.ID_Ram == cpu).ToList();
-                        flpDanhMucLapTop.Controls.Clear();
-                        foreach (var item in lapTops)
-                        {
-                            UserControlSanPhamLaptop user = new UserControlSanPhamLaptop(ConvertBinaryDataToImage(item.HinhAnh), item.TenLapTop, ChuyenRam(item.ID_Ram), ChuyenCPU(item.ID_CPU));
-                            flpDanhMucLapTop.Controls.Add(user);
-                        }
-                    }
-                    else if (cmbCpu.Text == "Intel Core i5")
-                    {
-                        string cpu = "CPU2";
-                        List<LapTop> lapTops = new List<LapTop>();
-                        lapTops = db.LapTops.Where(p => p.ID_Ram == cpu).ToList();
-                        flpDanhMucLapTop.Controls.Clear();
-                        foreach (var item in lapTops)
-                        {
-                            UserControlSanPhamLaptop user = new UserControlSanPhamLaptop(ConvertBinaryDataToImage(item.HinhAnh), item.TenLapTop, ChuyenRam(item.ID_Ram), ChuyenCPU(item.ID_CPU));
-                            flpDanhMucLapTop.Controls.Add(user);
-                        }
-                    }
-                    else if (cmbCpu.Text == "Intel Core i7")
-                    {
-                        string cpu = "CPU3";
-                        List<LapTop> lapTops = new List<LapTop>();
-                        lapTops = db.LapTops.Where(p => p.ID_Ram == cpu).ToList();
-                        flpDanhMucLapTop.Controls.Clear();
-                        foreach (var item in lapTops)
-                        {
-                            UserControlSanPhamLaptop user = new UserControlSanPhamLaptop(ConvertBinaryDataToImage(item.HinhAnh), item.TenLapTop, ChuyenRam(item.ID_Ram), ChuyenCPU(item.ID_CPU));
-                            flpDanhMucLapTop.Controls.Add(user);
-                        }
-                    }
-                    else if (cmbCpu.Text == "Intel Core i9")
-                    {
-                        string cpu = "CPU4";
-                        List<LapTop> lapTops = new List<LapTop>();
-                        lapTops = db.LapTops.Where(p => p.ID_Ram == cpu).ToList();
-                        flpDanhMucLapTop.Controls.Clear();
-                        foreach (var item in lapTops)
-                        {
-                            UserControlSanPhamLaptop user = new UserControlSanPhamLaptop(ConvertBinaryDataToImage(item.HinhAnh), item.TenLapTop, ChuyenRam(item.ID_Ram), ChuyenCPU(item.ID_CPU));
-                            flpDanhMucLapTop.Controls.Add(user);
-                        }
-                    }
-                    else if (cmbCpu.Text == "AMD Ryzen 3")
-                    {
-                        string cpu = "CPU5";
-                        List<LapTop> lapTops = new List<LapTop>();
-                        lapTops = db.LapTops.Where(p => p.ID_Ram == cpu).ToList();
-                        flpDanhMucLapTop.Controls.Clear();
-                        foreach (var item in lapTops)
-                        {
-                            UserControlSanPhamLaptop user = new UserControlSanPhamLaptop(ConvertBinaryDataToImage(item.HinhAnh), item.TenLapTop, ChuyenRam(item.ID_Ram), ChuyenCPU(item.ID_CPU));
-                            flpDanhMucLapTop.Controls.Add(user);
-                        }
-                    }
-                    else if (cmbCpu.Text == "AMD Ryzen 5")
-                    {
-                        string cpu = "CPU6";
-                        List<LapTop> lapTops = new List<LapTop>();
-                        lapTops = db.LapTops.Where(p => p.ID_Ram == cpu).ToList();
-                        flpDanhMucLapTop.Controls.Clear();
-                        foreach (var item in lapTops)
-                        {
-                            UserControlSanPhamLaptop user = new UserControlSanPhamLaptop(ConvertBinaryDataToImage(item.HinhAnh), item.TenLapTop, ChuyenRam(item.ID_Ram), ChuyenCPU(item.ID_CPU));
-                            flpDanhMucLapTop.Controls.Add(user);
-                        }
-                    }
-                    else if (cmbCpu.Text == "AMD Ryzen 7")
-                    {
-                        string cpu = "CPU7";
-                        List<LapTop> lapTops = new List<LapTop>();
-                        lapTops = db.LapTops.Where(p => p.ID_Ram == cpu).ToList();
-                        flpDanhMucLapTop.Controls.Clear();
-                        foreach (var item in lapTops)
-                        {
-                            UserControlSanPhamLaptop user = new UserControlSanPhamLaptop(ConvertBinaryDataToImage(item.HinhAnh), item.TenLapTop, ChuyenRam(item.ID_Ram), ChuyenCPU(item.ID_CPU));
-                            flpDanhMucLapTop.Controls.Add(user);
-                        }
-                    }
-                    else if (cmbCpu.Text == "AMD Ryzen 9")
-                    {
-                        string cpu = "CPU8";
-                        List<LapTop> lapTops = new List<LapTop>();
-                        lapTops = db.LapTops.Where(p => p.ID_Ram == cpu).ToList();
-                        flpDanhMucLapTop.Controls.Clear();
-                        foreach (var item in lapTops)
-                        {
-                            UserControlSanPhamLaptop user = new UserControlSanPhamLaptop(ConvertBinaryDataToImage(item.HinhAnh), item.TenLapTop, ChuyenRam(item.ID_Ram), ChuyenCPU(item.ID_CPU));
-                            flpDanhMucLapTop.Controls.Add(user);
-                        }
-                    }
-                    else if (cmbCpu.Text == "Apple M1")
-                    {
-                        string cpu = "CPU10";
-                        List<LapTop> lapTops = new List<LapTop>();
-                        lapTops = db.LapTops.Where(p => p.ID_Ram == cpu).ToList();
-                        flpDanhMucLapTop.Controls.Clear();
-                        foreach (var item in lapTops)
-                        {
-                            UserControlSanPhamLaptop user = new UserControlSanPhamLaptop(ConvertBinaryDataToImage(item.HinhAnh), item.TenLapTop, ChuyenRam(item.ID_Ram), ChuyenCPU(item.ID_CPU));
-                            flpDanhMucLapTop.Controls.Add(user);
-                        }
-                    }
-                    else if (cmbCpu.Text == "Apple M2")
-                    {
-                        string cpu = "CPU11";
-                        List<LapTop> lapTops = new List<LapTop>();
-                        lapTops = db.LapTops.Where(p => p.ID_Ram == cpu).ToList();
-                        flpDanhMucLapTop.Controls.Clear();
-                        foreach (var item in lapTops)
-                        {
-                            UserControlSanPhamLaptop user = new UserControlSanPhamLaptop(ConvertBinaryDataToImage(item.HinhAnh), item.TenLapTop, ChuyenRam(item.ID_Ram), ChuyenCPU(item.ID_CPU));
-                            flpDanhMucLapTop.Controls.Add(user);
-                        }
-                    }
-                    else if (cmbCpu.Text == "Apple M2 Pro")
-                    {
-                        string cpu = "CPU12";
-                        List<LapTop> lapTops = new List<LapTop>();
-                        lapTops = db.LapTops.Where(p => p.ID_Ram == cpu).ToList();
-                        flpDanhMucLapTop.Controls.Clear();
-                        foreach (var item in lapTops)
-                        {
-                            UserControlSanPhamLaptop user = new UserControlSanPhamLaptop(ConvertBinaryDataToImage(item.HinhAnh), item.TenLapTop, ChuyenRam(item.ID_Ram), ChuyenCPU(item.ID_CPU));
-                            flpDanhMucLapTop.Controls.Add(user);
-                        }
-                    }
-                    else if (cmbCpu.Text == "Apple M3")
-                    {
-                        string cpu = "CPU13";
-                        List<LapTop> lapTops = new List<LapTop>();
-                        lapTops = db.LapTops.Where(p => p.ID_Ram == cpu).ToList();
-                        flpDanhMucLapTop.Controls.Clear();
-                        foreach (var item in lapTops)
-                        {
-                            UserControlSanPhamLaptop user = new UserControlSanPhamLaptop(ConvertBinaryDataToImage(item.HinhAnh), item.TenLapTop, ChuyenRam(item.ID_Ram), ChuyenCPU(item.ID_CPU));
-                            flpDanhMucLapTop.Controls.Add(user);
-                        }
-                    }
-                    else if (cmbCpu.Text == "Apple M3 MAX")
-                    {
-                        string cpu = "CPU14";
-                        List<LapTop> lapTops = new List<LapTop>();
-                        lapTops = db.LapTops.Where(p => p.ID_Ram == cpu).ToList();
-                        flpDanhMucLapTop.Controls.Clear();
-                        foreach (var item in lapTops)
-                        {
-                            UserControlSanPhamLaptop user = new UserControlSanPhamLaptop(ConvertBinaryDataToImage(item.HinhAnh), item.TenLapTop, ChuyenRam(item.ID_Ram), ChuyenCPU(item.ID_CPU));
-                            flpDanhMucLapTop.Controls.Add(user);
-                        }
+                        UserControlSanPhamLaptop user = new UserControlSanPhamLaptop(ConvertBinaryDataToImage(item.HinhAnh), item.TenLapTop, ChuyenRam(item.ID_Ram), ChuyenCPU(item.ID_CPU));
+                        flpDanhMucLapTop.Controls.Add(user);
                     }
                 }
             }
-            
         }
 
         #region Button_Hang
